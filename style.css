@@ -6,8 +6,8 @@
 header {
 	background: #364357;
 	color: #fff;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 header h2 {
@@ -64,4 +64,8 @@ header .photo img {
 	margin-bottom: 10px;
 	border: #4E8FCC;
 	border-radius: 5px;
+}
+
+.content .rounded-circle {
+	border: 2px solid ;
 }
