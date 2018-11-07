@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: #364357;
+	color: #fff;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+header h2 {
+	color: #4E8FCC;
+	font-size: 23px;
+}
+
+header .photo img {
+	border: 7px solid #4E8FCC;
+}
+
+.contact {
+	background: #2A333E;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.contact i {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.contact a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.contact .phoneShow {
+	display: none;
+	cursor: pointer;
+}
+
+.contact .phoneHide {
+	cursor: pointer;
+}
+
+.content {
+	color: #000;
+	/*padding-top: 20px;
+	padding-bottom: 20px;*/
+}
+
+.content h3 {
+	color: #4E8FCC;
+	text-decoration: underline;
+	margin-top: 20px;
+}
+
+.content button {
+	color: #fff;
+	background: #4E8FCC;
+	padding: 5px;
+	margin-bottom: 10px;
+	border: #4E8FCC;
+	border-radius: 5px;
+}
