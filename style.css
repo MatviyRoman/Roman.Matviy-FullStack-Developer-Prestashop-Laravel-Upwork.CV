@@ -47,14 +47,25 @@ header .photo img {
 
 .content {
 	color: #000;
-	/*padding-top: 20px;
-	padding-bottom: 20px;*/
+	/*padding-top: 20px;*/
+	padding-bottom: 30px;
 }
 
 .content h3 {
 	color: #4E8FCC;
 	text-decoration: underline;
 	margin-top: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.content h4 {
+	padding: 0;
+	margin: 0;
+}
+
+.content span {
+	margin-bottom: 20px;
 }
 
 .content button {
@@ -66,6 +77,20 @@ header .photo img {
 	border-radius: 5px;
 }
 
+.content .language h4 {
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.content #all {
+	background: #4E8FCC;
+}
+
 .content .rounded-circle {
-	border: 2px solid ;
+	position: relative;
+	top: 5px;
+	border: 2px solid #4E8FCC;
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
 }
