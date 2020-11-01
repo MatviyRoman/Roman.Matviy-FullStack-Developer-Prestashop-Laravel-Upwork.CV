@@ -1,0 +1,163 @@
+// Author: Roman Matviy
+// Web: https://matviy.pp.ua/
+// Github: https://github.com/MatviyRoman/sass-mq-mix
+
+
+//
+// Screens
+//    short comand @include screen(325px) => @include s(325px)
+//
+
+@mixin s($min, $max: false, $orientation: false) {
+
+    @if ($max=="l") {
+        $max: "landscape";
+    }
+
+    @else if ($max=="p") {
+        $max: "portrait";
+    }
+
+    @if ($orientation=="l") {
+        $orientation: "landscape";
+    }
+
+    @else if ($orientation=="p") {
+        $orientation: "portrait";
+    }
+
+    @if ($max=="landscape") or ($max=="portrait") {
+
+        @include _ms-expr(append((), (min-width: $min,
+                    orientation: $max))) {
+            @content;
+        }
+    }
+
+    @else if ($max==false) or ($max==0) {
+
+        @include _ms-expr(append((), (min-width: $min,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+
+    @else if ($min==false) or ($min==0) {
+
+        @include _ms-expr(append((), (max-width: $max,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+
+    @else if ($min > $max) {
+
+        @include _ms-expr(append((), (min-width: $max,
+                    max-width: $min,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+
+    @else if ($max > $min) {
+
+        @include _ms-expr(append((), (min-width: $min,
+                    max-width: $max,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+}
+
+
+
+@mixin smin($max, $orientation: false) {
+
+    @include _ms-expr(append((), (max-width: $max, orientation: $orientation))) {
+        @content;
+    }
+}
+
+@mixin smax($min, $orientation: false) {
+    @include _ms-expr(append((), (min-width: $min, orientation: $orientation))) {
+        @content;
+    }
+}
+
+@mixin h($min, $max: false, $orientation: false) {
+
+    @if ($max=="l") {
+        $max: "landscape";
+    }
+
+    @else if ($max=="p") {
+        $max: "portrait";
+    }
+
+    @if ($orientation=="l") {
+        $orientation: "landscape";
+    }
+
+    @else if ($orientation=="p") {
+        $orientation: "portrait";
+    }
+
+
+    @if ($max=="landscape") or ($max=="portrait") {
+
+        @include _ms-expr(append((), (min-height: $min,
+                    orientation: $max))) {
+            @content;
+        }
+    }
+
+    @else if ($max==false) or ($max==0) {
+
+        @include _ms-expr(append((), (min-height: $min,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+
+    @else if ($min==false) or ($min==0) {
+
+        @include _ms-expr(append((), (max-height: $max,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+
+    @else if ($min > $max) {
+
+        @include _ms-expr(append((), (min-height: $max,
+                    max-height: $min,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+
+    @else if ($max > $min) {
+
+        @include _ms-expr(append((), (min-height: $min,
+                    max-height: $max,
+                    orientation: $orientation))) {
+            @content;
+        }
+    }
+}
+
+@mixin hmax($max, $orientation: false) {
+
+    @include _ms-expr(append((), (max-height: $max,
+                orientation: $orientation))) {
+        @content;
+    }
+}
+
+@mixin hmin($min, $orientation: false) {
+
+    @include _ms-expr(append((), (min-height: $min,
+                orientation: $orientation))) {
+        @content;
+    }
+}

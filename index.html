@@ -1,251 +1,321 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  	<head>
-	    <!-- Required meta tags -->
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/dist/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="text-wrapper">
+          <a class="link" href="https://matviy.pp.ua">
+            <h2 class="full-name">Roman Matviy</h2>
+            <h3 class="title">Full-stack developer</h3>
+          </a>
+          <h1 class="text">
+            At the moment, I have 8 months of commercial experience. I'm
+            currently working with wordpress/ php/ mysql/ jquery/ twig/ carbon
+            fields. I also work with creating themes for WP using html/css/scss.
+            I also study Vue.js and use it for my portfolio. I have a great
+            desire to learn and develop. I am looking for a good team for our
+            personal development.
+          </h1>
+        </div>
 
-	    <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <a href="https://matviy.pp.ua" class="logo" title="I am Roman Matviy"
+          ><img
+            src="assets/img/photo.jpg"
+            width="200"
+            height="200"
+            alt="Roman Matviy"
+          /><span>Hello</span></a
+        >
+      </div>
+    </header>
 
-		<!-- Font Awesome -->
-	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <section class="contact">
+      <div class="wrapper">
+        <ul class="left">
+          <li class="ion-ios-email-outline">
+            <a href="mailto:roman@matviy.pp.ua">roman@matviy.pp.ua</a>
+          </li>
+          <li class="ion-ios-telephone-outline phoneHide" style="display: none">
+            <a href="tel:+380938800822">+380 93 88 00 822</a>
+          </li>
+          <li class="ion-ios-telephone-outline phoneShow">
+            <a href="tel:+380XXXXXXXXX" title="click to show"
+              >+380 XX XX XX XXX</a
+            >
+          </li>
+          <li class="ion-ios-location-outline">
+            <a
+              href="https://www.google.com/maps/place/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8367536,24.0044266,11z/data=!4m5!3m4!1s0x473add7c09109a57:0x4223c517012378e2!8m2!3d49.839683!4d24.029717"
+              >Lviv, Ukraine</a
+            >
+          </li>
+          <li class="ion-earth">
+            <a href="https://matviy.pp.ua">Portfolio</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li class="ion-social-linkedin-outline">
+            <a href="https://linkedin.com/in/MatviyRoman">linkedin</a>
+          </li>
+          <li class="ion-social-facebook-outline">
+            <a href="https://fb.com/romas6ka">facebook</a>
+          </li>
+          <li class="ion-social-skype-outline">
+            <a href="skype:romas6ka">skype</a>
+          </li>
+          <li class="ion-social-github">
+            <a href="https://github.com/MatviyRoman">github</a>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-	    <!-- Main Style -->
-	    <link rel="stylesheet" type="text/css" href="style.css">
+    <section class="content">
+      <div class="wrapper">
+        <ul class="block languages">
+          <h2 class="title">LANGUAGES</h2>
+          <li>
+            <span>Ukraine</span>
+            <ul class="circle">
+              <li class="active"></li>
+              <li class="active"></li>
+              <li class="active"></li>
+              <li class="active"></li>
+              <li class="active"></li>
+            </ul>
+          </li>
+          <li>
+            <span>English</span>
 
-	    <title>Roman.Matviy.CV</title>
-  	</head>
-  	<body>
-  		<header>
-  			<div class="container">
-  				<div class="row justify-content-between">
-  					<div class="aboutMe col-8 col-sm-8 col-md-10">
-  						<h1>Roman Matviy</h1>
-  						<h2>Front-end developer</h2>
-  						<span>
-  							Drawings of projects / layers on the basis of PSD-models.
-  							I have a great desire to study and develop in this direction.
-  						</span>
-  					</div>
-  					<div class="photo col-4 col-sm-4 col-md-2">
-  						<img src="photo2.jpg" alt="photo" class="img-fluid rounded-circle">
-  					</div>
-  				</div>
-  			</div>
-  		</header>
-  		<div class="contact">
-  			<div class="container">
-  				<div class="row">
-  					<div class="left col-12 col-md-6">
-  						<i class="fas fa-envelope"></i>
-  						<a href="mailto:roman@matviy.pp.ua?subject=feedback">roman@matviy.pp.ua</a>
-  						<br>
-  						<i class="fas fa-map-marker-alt"></i>
-  						Lviv, Ukraine
-  						<br>
-  						<i class="fas fa-globe-africa"></i>
-  						<a href="http://matviy.pp.ua">matviy.pp.ua</a>
-  						<br>
-  						<i class="fab fa-skype"></i>
-  						romas6ka
-  						<br>
-  						<i class="fab fa-github"></i>
-  						<a href="http://github.com/MatviyRoman">github.com/MatviyRoman</a>
-  					</div>
-  					<div class="right col-12 col-md-6">
-  						<div class="phoneShow" title="Click to Hide">
-  							<i class="fas fa-mobile-alt"></i>
-  							+380 93 88 00 822
-  							<br>
-  							<i class="fas fa-mobile-alt"></i>
-  							+380 67 77 19 340
-  						</div>
-  						<div class="phoneHide" title="Click to Show">
-  							<i class="fas fa-mobile"></i>
-  							+380 XX XX XX XXX
-  							<br>
-  							<i class="fas fa-mobile"></i>
-  							+380 XX XX XX XXX
-  						</div>
-  						<i class="far fa-calendar-alt"></i>
-  						09 September 1987
-  						<br>
-  						<i class="fab fa-linkedin-in"></i>
-  						<a href="http://linkedin.com/in/MatviyRoman">linkedin.com/in/MatviyRoman</a>
-  						<br>
-  						<i class="fab fa-facebook-f"></i>
-  						<a href="http://facebook.com/romas6ka">facebook.com/romas6ka</a>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
-    	<div class="content">
-    		<div class="container">
-    			<div class="row">
-    				<div class="left col-12 col-md-6">
-    					<h3>PROJECTS AND EXPERIENCE</h3>
-    					<h4>My Portfolio</h4>
-    					<span class="setting">
-    						matviy.pp.ua
-    						<a href="http://matviy.pp.ua">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h4>Bisines</h4>
-    					<span>
-    						bisines.matviy.pp.ua
-    						<a href="http://bisines.matviy.pp.ua">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h4>Creatives</h4>
-    					<span>
-    						creatives.matviy.pp.ua
-    						<a href="http://creatives.matviy.pp.ua">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h4>Startup</h4>
-    					<span>
-    						startup.matviy.pp.ua
-    						<a href="http://startup.matviy.pp.ua">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h4>HTML Tables Generation</h4>
-    					<span>
-    						gentab.matviy.pp.ua
-    						<a href="http://gentab.matviy.pp.ua">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h4>Window Modal Test</h4>
-    					<span>
-    						modal.matviy.pp.ua
-    						<a href="http://modal.matviy.pp.ua">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h4>Accordion</h4>
-    					<span>
-    						mytesting.ga
-    						<a href="http://mytesting.ga">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</span>
-    					<h3>CERTIFICATES</h3>
-    					<h4>
-    						HTML Fundamentals (09/2018 – Present)
-    						<a href="https://www.sololearn.com/Certificate/1014-10299461/pdf/">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</h4>
-    					<span>License 1014-10299461</span>
-    					<h4>
-    						CSS Sertificate (09/2018 – Present)
-    						<a href="https://www.sololearn.com/Certificate/1023-10299461/pdf/">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</h4>
-    					<span>License 1023-10299461</span>
-    					<h4>
-    						jQuery Tutorial (10/2018 – Present)
-    						<a href="https://www.sololearn.com/Certificate/1082-10299461/pdf/">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</h4>
-    					<span>License 1082-10299461</span>
-    					<h4>
-    						JavaScript Tutorial (10/2018 – Present)
-    						<a href="https://www.sololearn.com/Certificate/1024-10299461/pdf/">
-    							<i class="fas fa-sign-out-alt"></i>
-    						</a>
-    					</h4>
-    					<span>License 1024-10299461</span>
-    				</div>
-    				<div class="right col-12 col-md-6">
-    					<h3>SKILLS</h3>
-    					<button>HTML</button>
-    					<button>CSS</button>
-    					<button>JavaScript</button>
-    					<button>jQuery</button>
-    					<button>Bootstrap</button>
-    					<button>Flexbox</button>
-    					<button>Git</button>
-    					<button>Photoshop</button>
-    					<button>Command line</button>
-    					<h3>I HAVE AN UNDERSTANDING</h3>
-    					<h4>Angular 2 / TypeScript</h4>
-    					<span>UNDERSTANDING OF</span>
-    					<h4>PHP / MySQL</h4>
-    					<span>UNDERSTANDING OF</span>
-    					<h3>MY GOAL IS TO STUDY</h3>
-    					<span>
-    						Vue.js, Node.js, Angular 2 / TypeScript, PHP /MySQL, AJAX
-    					</span>
-    					<h3>PERSONAL QUALITIES</h3>
-    					<span>without bad habits</span>
-    					<br>
-    					<span>persistent and purposeful</span>
-    					<br>
-    					<span>responsible and executive</span>
-    					<br>
-    					<span>prone to analytical activity</span>
-    					<br>
-    					<span>punctual</span>
-    					<div class="language">
-    						<div class="container">
-    							<div class="row">
-    								<h3>LANGUAGES</h3>
-		    						<div class="w-100"></div>
-			    					<h4 class="col-2 col-md-3">Ukraine</h4>
-			    					<div id="all" class="rounded-circle offset-1 offset-md-0"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div class="w-100"></div>
-			    					<h4 class="col-2 col-md-3">Russian</h4>
-			    					<div id="all" class="rounded-circle offset-1 offset-md-0"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="w-100"></div>
-			    					<h4 class="col-2 col-md-3">English</h4>
-			    					<div id="all" class="rounded-circle offset-1 offset-md-0"></div>
-			    					<div id="all" class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="w-100"></div>
-			    					<h4 class="col-2 col-md-3">Polish</h4>
-			    					<div id="all" class="rounded-circle offset-1 offset-md-0"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-			    					<div class="rounded-circle"></div>
-    							</div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    	<div class="footer">
-    		<div class="container">
-    			@ Roman Matviy 2018
-    		</div>
-    	</div>
+            <ul class="circle">
+              <li class="active"></li>
+              <li class="active"></li>
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li>
+            <span>Polish</span>
 
-	    <!-- Optional JavaScript -->
-	    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+            <ul class="circle">
+              <li class="active"></li>
+              <li class="active"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li>
+            <span>Russian</span>
+            <ul class="circle">
+              <li class="active"></li>
+              <li class="active"></li>
+              <li class="active"></li>
+              <li class="active"></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="block skills">
+          <h2 class="title">Skills</h2>
+          <li><a href="https://matviy.pp.ua">PHP/MySQL/SQL</a></li>
+          <li><a href="https://matviy.pp.ua">HTML/CSS/SCSS</a></li>
+          <li><a href="https://matviy.pp.ua">JS/jQuery/Ajax</a></li>
+          <li><a href="https://matviy.pp.ua">Bootstrap</a></li>
+          <li><a href="https://matviy.pp.ua">Flexbox</a></li>
+          <li><a href="https://matviy.pp.ua">Git/Github</a></li>
+          <li><a href="https://matviy.pp.ua">BEM</a></li>
+          <li><a href="https://matviy.pp.ua">JSON</a></li>
+          <li><a href="https://matviy.pp.ua">Figma</a></li>
+          <li><a href="https://matviy.pp.ua">Avocode</a></li>
+          <li><a href="https://matviy.pp.ua">Photoshop</a></li>
+          <li><a href="https://matviy.pp.ua">SSH/SFTP</a></li>
+          <li><a href="https://matviy.pp.ua">FTP</a></li>
+          <li><a href="https://matviy.pp.ua">Command line</a></li>
+          <li>
+            <a href="https://matviy.pp.ua">WordPress/Multisite</a>
+          </li>
+          <li>
+            <a href="https://matviy.pp.ua">WP Elementor</a>
+          </li>
+          <li>
+            <a href="https://matviy.pp.ua">Carbon Fields</a>
+          </li>
+          <li><a href="https://matviy.pp.ua">UX/UI</a></li>
+          <li><a href="https://matviy.pp.ua">TWIG/SMARTY</a></li>
+          <li><a href="https://matviy.pp.ua">Webpack/Laravel.Mix</a></li>
+          <li><a href="https://matviy.pp.ua">Gulp</a></li>
+        </ul>
+        <ul class="block my-work">
+          <h2 class="title">
+            EXAMPLES OF MY WORKS
+          </h2>
+          <li>
+            <a href="https://glowcityaudio.com" rel="nofollow"
+              ><p>GlowCity (WP/Twig/Carbon Fields)</p>
+              glowcityaudio.com</a
+            >
+          </li>
+          <li>
+            <a href="http://sofa.lviv.ua" rel="nofollow"
+              ><p>Sofa (WP/TWIG/Carbon fields)</p>
+              sofa.lviv.ua</a
+            >
+          </li>
+          <li>
+            <a href="https://firanka.log.in.ua" rel="nofollow"
+              ><p>Firanka (WP/Elementor)</p>
+              firanka.log.in.ua</a
+            >
+          </li>
+          <li>
+            <a href="https://appetite.kiev.ua" rel="nofollow">
+              <p>Appetite (WP/TWIG/HTML/CSS)</p>
+              appetite.kiev.ua</a
+            >
+          </li>
+          <li>
+            <a href="https://matviy.pp.ua">
+              <p>My Portfolio (HTML/Bootstrap/vue.js)</p>
+              matviy.pp.ua</a
+            >
+          </li>
+          <li>
+            <a href="https://surelockkey.com" rel="nofollow">
+              <p>SureLockKey (WP/HTML/CSS)</p>
+              surelockkey.com</a
+            >
+          </li>
+          <li>
+            <a href="https://rogue-shefs.matviy.pp.ua"
+              ><p>Rogue Chefs (HTML/CSS/JS/Slick Slider)</p>
+              rogue-chefs.matviy.pp.ua</a
+            >
+          </li>
+          <li>
+            <a href="https://gentab.matviy.pp.ua"
+              ><p>HTML Tables Generation (HTML/CSS/jQuery)</p>
+              gentab.matviy.pp.ua</a
+            >
+          </li>
+        </ul>
+        <ul class="block certificates">
+          <h2 class="title">
+            CERTIFICATES
+          </h2>
+          <li>
+            <a
+              href="http://cert.programmingmentor.com/2020-ecb3d4127b27.pdf"
+              rel="nofollow"
+              ><p>ScriptJedi42 - ProgrammingMentor (03/2020)</p>
+              License 2020-ecb3d4127b27</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.sololearn.com/Certificate/1059-10299461/pdf/"
+              rel="nofollow"
+              ><p>PHP course (03/2020)</p>
+              License 1059-10299461</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.sololearn.com/Certificate/1060-10299461/pdf/"
+              rel="nofollow"
+              ><p>SQL course (04/2020)</p>
+              License 1060-10299461</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://matviy.pp.ua/certificate/PDF/cert-36340060295e40e5b149e02866465b3d.pdf"
+              rel="nofollow"
+              ><p>Basics of Web UI development (02/2019)</p>
+              License 36340060295e40e5b149e02866465b3d</a
+            >
+          </li>
+          <li>
+            <a href="https://www.sololearn.com/Certificate/1024-10299461/pdf/"
+              ><p>JavaScript course (10/2018)</p>
+              License 1024-10299461</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.sololearn.com/Certificate/1082-10299461/pdf/"
+              rel="nofollow"
+              ><p>jQuery course (10/2018)</p>
+              License 1082-10299461</a
+            >
+          </li>
+          <li>
+            <a href="https://www.sololearn.com/Certificate/1014-10299461/pdf/"
+              ><p>HTML course (09/2018)</p>
+              License 1014-10299461</a
+            >
+          </li>
+          <li>
+            <a href="https://www.sololearn.com/Certificate/1023-10299461/pdf/"
+              ><p>CSS course (09/2018)</p>
+              License 1023-10299461</a
+            >
+          </li>
+        </ul>
+        <ul class="block own-experience">
+          <h2 class="title">OWN EXPERIENCE</h2>
+          <li><a href="https://matviy.pp.ua">YII2,</a></li>
+          <li><a href="https://matviy.pp.ua">React,</a></li>
+          <li><a href="https://matviy.pp.ua">Angular,</a></li>
+          <li><a href="https://matviy.pp.ua">Vue.js,</a></li>
+        </ul>
+        <ul class="block study">
+          <h2 class="title">I want to study</h2>
+          <li><a href="https://matviy.pp.ua">YII2,</a></li>
+          <li><a href="https://matviy.pp.ua">Laravel,</a></li>
+          <li><a href="https://matviy.pp.ua">React,</a></li>
+          <li><a href="https://matviy.pp.ua">Angular,</a></li>
+          <li><a href="https://matviy.pp.ua">Vue.js,</a></li>
+          <li><a href="https://matviy.pp.ua">Nuxt.js,</a></li>
+          <li><a href="https://matviy.pp.ua">Next.js</a></li>
+        </ul>
 
-	    <!-- Main Script -->
-	    <script src="main.js"></script>
-  	</body>
+        <ul class="block qualities">
+          <div class="h2 title">PERSONAL QUALITIES</div>
+          <li><a href="https://matviy.pp.ua">persistent,</a></li>
+          <li><a href="https://matviy.pp.ua">purposeful,</a></li>
+          <li><a href="https://matviy.pp.ua">responsible,</a></li>
+          <li><a href="https://matviy.pp.ua">executive,</a></li>
+          <li>
+            <a href="https://matviy.pp.ua">prone to analytical activity,</a>
+          </li>
+          <li><a href="https://matviy.pp.ua">punctual,</a></li>
+          <li><a href="https://matviy.pp.ua">without bad habits</a></li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        <a href="https://matviy.pp.ua">@ Roman Matviy 2018 - 2020</a>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/dist/index.js"></script>
+  </body>
 </html>
