@@ -1,0 +1,52 @@
+{
+  "name": "resass",
+  "version": "1.0.7",
+  "description": "Mixins for checking group of devices (mobile, tablet, laptop, desktop) or device by name (iPhone 5, iPhone X, iPhone 11 Pro Max, iPad Pro 12.9, etc). Expandable and very simple for usage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatviyRoman/resass.git"
+  },
+  "keywords": [
+    "frontend",
+    "front-end",
+    "scss",
+    "sass",
+    "resass",
+    "rescss",
+    "combine",
+    "combine-scss",
+    "combine-sass",
+    "responsive",
+    "responsive-sass",
+    "responsive-scss",
+    "sass-css",
+    "scss-css",
+    "scss-media",
+    "sass-media",
+    "mq",
+    "scss-mq",
+    "sass-mq",
+    "sass-media-screen",
+    "sass-mediascreen",
+    "scss-media-screen",
+    "scss-mediascreen",
+    "sass-media-queries",
+    "scss-media-queries",
+    "sass-mix",
+    "scss-mix",
+    "mix"
+  ],
+  "author": "Roman Matviy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatviyRoman/resass/issues"
+  },
+  "homepage": "https://github.com/MatviyRoman/resass#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

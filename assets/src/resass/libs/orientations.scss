@@ -1,0 +1,30 @@
+// Author: Roman Matviy
+// Web: https://matviy.pp.ua/
+// Github: https://github.com/MatviyRoman/sass-mq-mix
+
+//
+// Orientations
+//
+@mixin landscape() {
+    @include _ms-expr(append((), (orientation: landscape))) {
+        @content;
+    }
+}
+
+@mixin portrait() {
+    @include _ms-expr(append((), (orientation: portrait))) {
+        @content;
+    }
+}
+
+@mixin l() {
+    @include _ms-expr(append((), (orientation: landscape))) {
+        @content;
+    }
+}
+
+@mixin p() {
+    @include _ms-expr(append((), (orientation: portrait))) {
+        @content;
+    }
+}
