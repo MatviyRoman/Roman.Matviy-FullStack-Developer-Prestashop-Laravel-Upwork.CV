@@ -22,22 +22,6 @@
 					<h2 class="full-name">Roman Matviy</h2>
 					<h3 class="title">Full-stack developer</h3>
 				</a>
-				<!--<h1 class="text">
-						At the moment I have 1 year and 7 months of commercial
-						experience. I'm currently working with wordpress/ php/ mysql/
-						jquery/ twig/ carbon fields. I also work with creating themes
-						for WP using html/css/scss. I also study Vue.js and use it for
-						my portfolio. I have a great desire to learn and develop. I am
-						looking for a good team for our personal development.
-					</h1>-->
-				<!-- <h1 class="text">
-					At the moment I have 1 year and 7 months of commercial
-					experience. I'm currently working with wordpress/ php/ mysql/
-					jquery/ twig/ carbon fields. I also work with creating themes
-					for WP and Prestashop using html/css/scss. I have a great
-					desire to learn and develop. I am looking for a good team for
-					our personal development.
-				</h1> -->
 				<h1 class="text">
 					At the moment I have <span id="all-time" style="color: #fff;"></span> of commercial
 					experience. I'm currently working with prestashop/ wordpress/ php/ mysql/
@@ -59,15 +43,15 @@
 				<li class="ion-ios-email-outline">
 					<a href="mailto:roman@matviy.pp.ua">roman@matviy.pp.ua</a>
 				</li>
-				<li class="ion-ios-telephone-outline phoneHide" style="display: none">
+				<li class="ion-ios-telephone-outline phoneHide" style="display: none" id="phoneHide">
 					<a href="tel:+380938800822">+380 93 88 00 822</a>
 				</li>
-				<li class="ion-ios-telephone-outline phoneShow" style="display: block">
-					<a href="tel:+380XXXXXXXXX" title="click to show">+380 XX XX XX XXX</a>
+				<li class="ion-ios-telephone-outline phoneShow" style="display: block" id="phoneShow">
+					<a href="tel:+380XXXXXXXXX" title="click to show" onclick="return false">+380 XX XX XX XXX</a>
 				</li>
 				<li class="ion-ios-location-outline">
-					<a
-					   href="https://www.google.com/maps/place/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8367536,24.0044266,11z/data=!4m5!3m4!1s0x473add7c09109a57:0x4223c517012378e2!8m2!3d49.839683!4d24.029717">Lviv,
+					<a href="https://www.google.com/maps/place/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2,+%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+79000/@49.8367536,24.0044266,11z/data=!4m5!3m4!1s0x473add7c09109a57:0x4223c517012378e2!8m2!3d49.839683!4d24.029717"
+					   rel="nofollow">Lviv,
 						Ukraine</a>
 				</li>
 				<li class="ion-earth">
@@ -76,16 +60,16 @@
 			</ul>
 			<ul class="right">
 				<li class="ion-social-linkedin-outline">
-					<a href="https://linkedin.com/in/MatviyRoman">linkedin</a>
+					<a href="https://linkedin.com/in/MatviyRoman" rel="nofollow">linkedin</a>
 				</li>
 				<li class="ion-social-facebook-outline">
-					<a href="https://fb.com/romas6ka">facebook</a>
+					<a href="https://fb.com/romas6ka" rel="nofollow">facebook</a>
 				</li>
 				<li class="ion-social-skype-outline">
 					<a href="skype:romas6ka">skype</a>
 				</li>
 				<li class="ion-social-github">
-					<a href="https://github.com/MatviyRoman">github</a>
+					<a href="https://github.com/MatviyRoman" rel="nofollow">github</a>
 				</li>
 			</ul>
 		</div>
@@ -181,7 +165,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://ks.lviv.ua" rel="nofollow">
+					<a href="https://ks.lviv.ua" rel="nofollow">
 						<p>Furniture edge (WP/TWIG/Carbon fields)</p>
 						ks.lviv.ua
 					</a>
@@ -226,7 +210,7 @@
 			<ul class="block certificates">
 				<h2 class="title">CERTIFICATES</h2>
 				<li>
-					<a href="http://cert.programmingmentor.com/2020-ecb3d4127b27.pdf" rel="nofollow">
+					<a href="https://cert.programmingmentor.com/2020-ecb3d4127b27.pdf" rel="nofollow">
 						<p>ScriptJedi42 - ProgrammingMentor (03/2020)</p>
 						License 2020-ecb3d4127b27
 					</a>
@@ -377,8 +361,8 @@
 		</div>
 	</footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="assets/dist/index.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="assets/dist/index.js"></script> -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 
@@ -400,6 +384,13 @@
 				var div = document.getElementsByClassName('phoneShow');
 				div[0].style.display = 'none';
 			}
+
+			var phoneHide = document.getElementById('phoneHide');
+			var phoneShow = document.getElementById('phoneShow');
+			phoneShow.onclick = function () {
+				phoneHide.style.display = 'block';
+				phoneShow.style.display = 'none';
+			};
 		});
 
 		// date = old time 2019-04-01
