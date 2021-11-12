@@ -8,11 +8,6 @@
 		  content="Roman, Matviy, Matvii, Full-stack, Full-stack php, Full-stack developer, Fullstack, Fullstack php, Fullstack developer">
 	<title>Roman Matviy - Full-stack developer</title>
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" /> -->
-	<link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1" as="font"
-		  onload="this.onload=null;this.rel='stylesheet'">
-	<noscript>
-		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1">
-	</noscript>
 	<link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" as="style"
 		  onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
@@ -43,7 +38,6 @@
 					 width="200" height="200" alt="Roman Matviy" /><span>Hello</span></a>
 		</div>
 	</header>
-
 	<section class="contact">
 		<div class="wrapper">
 			<ul class="left">
@@ -81,7 +75,6 @@
 			</ul>
 		</div>
 	</section>
-
 	<section class="content">
 		<div class="wrapper">
 			<ul class="block languages">
@@ -280,7 +273,6 @@
 				<li><a href="https://matviy.pp.ua">Nuxt.js,</a></li>
 				<li><a href="https://matviy.pp.ua">Next.js</a></li>
 			</ul>
-
 			<ul class="block qualities">
 				<div class="h2 title">PERSONAL QUALITIES</div>
 				<li><a href="https://matviy.pp.ua">persistent,</a></li>
@@ -295,7 +287,6 @@
 			</ul>
 		</div>
 	</section>
-
 	<section class="wrapper timeline">
 		<div class="h2 title">TIMELINE</div>
 		<div class="container left">
@@ -324,7 +315,6 @@
 				</p>
 			</div>
 		</div>
-
 		<div class="container left">
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ Sure Lock &amp; key LLC</h2>
@@ -365,32 +355,26 @@
 			</div>
 		</div>
 	</section>
-
 	<footer class="footer">
 		<div class="wrapper">
 			<a href="https://matviy.pp.ua">@ Roman Matviy 2018 - <span id="year"></span></a>
 		</div>
 	</footer>
-
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="assets/dist/index.js"></script> -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-
 			timeToCurrent('all-time', '2020-03-01');
 			timeToCurrent('softsprint', '2020-11-05');
 			timeToCurrent('surelockkey', '2020-05-01', '2020-09-01');
 			timeToCurrent('yourstore', '2019-03-01', '2019-04-30');
 			timeToCurrent('lovecoffee', '2019-01-01', '2019-02-01');
-
 			var d = new Date();
 			var n = d.getFullYear();
 			document.getElementById('year').innerHTML = n;
-
 			var url_string = window.location.href
 			var url = new URL(url_string);
 			var show = url.searchParams.get('show');
-
 			if (show == 1) {
 				var div = document.getElementsByClassName('phoneHide');
 				div[0].style.display = 'block';
@@ -398,7 +382,6 @@
 				var div = document.getElementsByClassName('phoneShow');
 				div[0].style.display = 'none';
 			}
-
 			var phoneHide = document.getElementById('phoneHide');
 			var phoneShow = document.getElementById('phoneShow');
 			phoneShow.onclick = function () {
@@ -417,14 +400,12 @@
 			var days = Math.ceil(Math.abs(old.getTime() - dateend.getTime()) / (1000 * 3600 * 24));
 			var year = Math.floor(days / 365);
 			var months = Math.floor((days - (year * 365)) / 30);
-
 			var text = '';
 			if (year > 1) {
 				text += year + ' years ';
 			} else if (year) {
 				text += year + ' year ';
 			}
-
 			if (months > 1) {
 				text += months + ' months ';
 			} else if (months) {
