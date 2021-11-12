@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,13 +8,17 @@
 		  content="Roman, Matviy, Matvii, Full-stack, Full-stack php, Full-stack developer, Fullstack, Fullstack php, Fullstack developer">
 	<title>Roman Matviy - Full-stack developer</title>
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" /> -->
-	<link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" as="font" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"></noscript>
+	<link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" as="style"
+		  onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	</noscript>
 	<!-- <link rel="preload" href="assets/dist/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/dist/style.min.css"></noscript> -->
 	<link rel="stylesheet" href="assets/dist/style.min.css" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
 	<header class="header">
 		<div class="wrapper">
@@ -320,7 +325,9 @@
 		<div class="container left">
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ Sure Lock &amp; key LLC</h2>
-				<p class="time"><time>06.2020 - 09.2020</time><br>( 4 months )</p>
+				<p class="time"><time>05.2020 - 09.2020</time><br>(
+					<span id="surelockkey" style="color: #fff;"></span>)
+				</p>
 				<p>
 					Website development in Wordpress for the company. (HTML5/
 					CSS3/ SCSS/ SASS/ PHP/ TWIG/ JS/ jQuery/ layout with Figma/
@@ -331,7 +338,9 @@
 		<div class="container right">
 			<div class="content">
 				<h2>Web development/ Fulltime/ company "Your Store"</h2>
-				<p class="time"><time>03.2019 - 05.2019</time><br>( 2 months )</p>
+				<p class="time"><time>03.2019 - 05.2019</time><br>(
+					<span id="yourstore" style="color: #fff;"></span>)
+				</p>
 				<p>
 					Creating sites on WordPress, also used the Elementor plugin.
 					Performed edits according to the mentor and customers.
@@ -342,7 +351,9 @@
 		<div class="container left">
 			<div class="content">
 				<h2>Front-end Engineer/ Fulltime/ Lovecoffee.pl</h2>
-				<p class="time"><time>01.2019 - 02.2019</time><br>( 1 month )</p>
+				<p class="time"><time>01.2019 - 02.2019</time><br>(
+					<span id="lovecoffee" style="color: #fff;"></span>)
+				</p>
 				<p>
 					It was remote work, working an average of 7 - 9 hours a day.
 					Edit html5 / css3 product code, edit code, find and add photos
@@ -363,8 +374,11 @@
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
 
-			timeToCurrent('2020-03-01', 'all-time');
-			timeToCurrent('2020-11-05', 'softsprint');
+			timeToCurrent('all-time', '2020-03-01');
+			timeToCurrent('softsprint', '2020-11-05');
+			timeToCurrent('surelockkey', '2020-05-01', '2020-09-01');
+			timeToCurrent('yourstore', '2019-03-01', '2019-04-30');
+			timeToCurrent('lovecoffee', '2019-01-01', '2019-02-01');
 
 			var d = new Date();
 			var n = d.getFullYear();
@@ -390,33 +404,32 @@
 			};
 		});
 
-		// date = old time 2019-04-01
-		// container = id container
-		function timeToCurrent(date, container) {
-			var res = document.getElementById(container);
-
-			var current = new Date();
-			var old = new Date(date); //2019-04-01'
-			var days = Math.ceil(Math.abs(old.getTime() - current.getTime()) / (1000 * 3600 * 24));
+		// datestart = date start 2019-04-01
+		// dateend = date end 2019-04-01
+		// element = id element
+		function timeToCurrent(element, datestart, dateend = 0) {
+			var res = document.getElementById(element);
+			var dateend = dateend ? new Date(dateend) : new Date();
+			var old = new Date(datestart); //2019-04-01'
+			var days = Math.ceil(Math.abs(old.getTime() - dateend.getTime()) / (1000 * 3600 * 24));
 			var year = Math.floor(days / 365);
 			var months = Math.floor((days - (year * 365)) / 30);
 
-			if (months > 1 && year > 1) {
-				res.innerHTML = year + ' years, ' + months + ' months';
-			} else if (months > 1 && year == 1) {
-				res.innerHTML = year + ' year, ' + months + ' months';
-			} else if (months > 1 && year > 1) {
-				res.innerHTML = year + ' years, ' + months + ' months';
+			var text = '';
+			if (year > 1) {
+				text += year + ' years ';
+			} else if (year) {
+				text += year + ' year ';
 			}
-			else if (!months && year > 2) {
-				res.innerHTML = year + ' years ';
+
+			if (months > 1) {
+				text += months + ' months ';
+			} else if (months) {
+				text += months + ' month ';
 			}
-			else if (!months && year == 1) {
-				res.innerHTML = year + ' year ';
-			} else {
-				res.innerHTML = year + ' years, ' + months + ' months';
-			}
+			res.innerHTML = text;
 		}
 	</script>
 </body>
+
 </html>
