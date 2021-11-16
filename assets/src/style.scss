@@ -341,6 +341,7 @@ body {
   .skills {
     li {
       display: inline-block;
+      margin-left: 10px;
 
       @include s(0, 300px) {
         width: 99%;
