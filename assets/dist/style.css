@@ -205,6 +205,10 @@ body {
 .content .study li {
 	display: inline-block;
 }
+.content .skills li {
+	margin-left: 10px;
+}
+
 .content .skills li a {
 	background: #222a33;
 	border-radius: 3px;
