@@ -219,6 +219,22 @@ body {
       display: block;
     }
 
+    .left {
+      @include s(0, 650px) {
+        text-align: left;
+
+        li {
+          display: flex;
+          min-height: 48px;
+
+          a {
+            padding-right: 15px;
+            padding-bottom: 27px;
+          }
+        }
+      }
+    }
+
     .left,
     .right {
       width: 100%;
@@ -238,6 +254,7 @@ body {
 
           a {
             padding-right: 15px;
+            padding-bottom: 27px;
           }
         }
       }
