@@ -42,15 +42,15 @@ body {
   padding: 4em 1.3em 3em;
 
   @include s(0, 650px) {
-    padding: 3em 1.3em 3em;
+    padding: 4em 1.3em 3em;
   }
 
   @include s(0, 400px) {
-    padding: 2em 1em 2em;
+    padding: 4em 1em 2em;
   }
 
   @include s(0, 300px) {
-    padding: 0;
+    padding: 4em 0 0;
   }
 }
 
@@ -68,6 +68,28 @@ body {
 
   @include s(0, 400px) {
     padding: 1em 1em;
+  }
+}
+
+.download-cv {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  max-height: 40px;
+  height: 100%;
+  padding: 10px;
+  background: #222a33;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 1s;
+  border-radius: 5px;
+  white-space: nowrap;
+
+  &:hover {
+    background: #313c4e;
   }
 }
 
