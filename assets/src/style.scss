@@ -155,8 +155,9 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    @include s(0, 510px) {
-      font-size: 1em;
+    @include s(0, 525px) {
+      // font-size: 1em;
+      font-size: 24px;
     }
   }
 
@@ -323,8 +324,14 @@ body {
         max-width: 100%;
       }
 
+      @include s(0, 525px) {
+        font-size: 1.01em;
+        font-size: 24px;
+      }
+
       @include s(0, 370px) {
         font-size: 1.01em;
+        font-size: 24px;
       }
     }
 
