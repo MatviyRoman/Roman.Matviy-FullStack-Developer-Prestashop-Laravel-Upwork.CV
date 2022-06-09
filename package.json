@@ -1,0 +1,77 @@
+{
+  "name": "programist-theme",
+  "version": "1.0.0",
+  "description": "Laravel-mix",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "scripts1": {
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "Roman Matviy",
+  "site": "https:://matviy.pp.ua",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.5.3",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^6.2.1",
+    "cross-env": "^5.2.1",
+    "css-declaration-sorter": "^5.1.2",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "jquery": "^3.5.1",
+    "laravel-mix": "^5.0.7",
+    "laravel-mix-string-replace": "^0.1.0",
+    "popover.js": "^0.2.40",
+    "popper.js": "^1.14.7",
+    "postcss-color-short": "^0.2.4",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.17.3",
+    "sass-loader": "^7.1.0",
+    "string-replace-loader": "^3.0.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "caniuse-lite": "^1.0.30001304",
+    "compress-images": "^1.9.5",
+    "countup.js": "^2.0.4",
+    "css-mqpacker": "^7.0.0",
+    "fela-sort-media-query-mobile-first": "^11.4.0",
+    "i": "^0.3.6",
+    "imagemin-mozjpeg": "^9.0.0",
+    "minify-html-webpack-plugin": "^1.1.3",
+    "npm": "^6.14.8",
+    "postcss-combine-duplicated-selectors": "^10.0.2",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-discard-duplicates": "^4.0.2",
+    "postcss-merge-longhand": "^4.0.11",
+    "postcss-merge-rules": "^4.0.3",
+    "postcss-merge-selectors": "0.0.6",
+    "postcss-minify-gradients": "^4.0.2",
+    "postcss-move-media": "^1.0.0-pre",
+    "postcss-normalize-timing-functions": "^4.0.2",
+    "postcss-ordered-values": "^4.1.2",
+    "postcss-sort-media": "^0.2.1",
+    "postcss-sort-media-queries": "^2.1.10",
+    "postcss-unique-selectors": "^4.0.1",
+    "slick-carousel": "^1.8.1",
+    "sort-css-media-queries": "^1.5.2",
+    "wavesurfer.js": "^4.1.1",
+    "waypoints": "^4.0.1"
+  },
+  "browserslist": [
+    "last 40 version",
+    "not dead"
+  ],
+  "directories": {
+    "test": "tests"
+  }
+}
