@@ -511,12 +511,11 @@
 				var info_block = document.getElementById(`${element}_info`);
 				if (info_block) {
 					var start = datestart.slice(0, -3);
+					var end = 'present';
 
 					if (dateend) {
-						var end = dateend.slice(0, -3);
+						end = dateend.slice(0, -3);
 						end = `<time>${end}</time>`;
-					} else {
-						end = 'present';
 					}
 					info_block.innerHTML = `<time>${start}</time > - ${end}`;
 				}
