@@ -35,7 +35,7 @@
 					<h3 class="title">Full-stack developer</h3>
 				</a>
 				<h1 class="text">
-					At the moment, I have <span id="all-time" style="color: #fff;"></span> of commercial experience. I
+					At the moment, I have <span id="all_time" style="color: #fff;"></span> of commercial experience. I
 					am currently working with WhiteLion php framework which is very similar to laravel or yii2. I also
 					work with the these <a href="#skills" style="text-decoration: underline;">technologies</a> , which
 					are described in the block <a href="#skills" style="text-decoration: underline;">skills</a>. I have
@@ -121,16 +121,6 @@
 							<li></li>
 						</ul>
 					</li>
-					<!-- <li>
-						<span>Russian</span>
-						<ul class="circle">
-							<li class="active"></li>
-							<li class="active"></li>
-							<li class="active"></li>
-							<li class="active"></li>
-							<li></li>
-						</ul>
-					</li> -->
 				</ul>
 			</div>
 			<div class="block skills" id="skills">
@@ -346,7 +336,7 @@
 			<!--<div class="block own-experience">
 					<h2 class="title">OWN EXPERIENCE</h2>
 					<ul>
-					<li><a href="https://matviy.pp.ua">YII2,</a></li>
+					<li><a href="https://matviy.pp.ua">Yii2,</a></li>
 					<li><a href="https://matviy.pp.ua">Vue.js,</a></li>
 					</ul>
 				</div>-->
@@ -356,8 +346,7 @@
 					<li><a href="https://matviy.pp.ua">Symphony,</a></li>
 					<li><a href="https://matviy.pp.ua">Yii2,</a></li>
 					<li><a href="https://matviy.pp.ua">React,</a></li>
-					<li><a href="https://matviy.pp.ua">Angular,</a></li>
-					<li><a href="https://matviy.pp.ua">Vue.js,</a></li>
+					<li><a href="https://matviy.pp.ua">Vue3.js,</a></li>
 					<li><a href="https://matviy.pp.ua">Nuxt.js,</a></li>
 					<li><a href="https://matviy.pp.ua">Next.js</a></li>
 					<li><a href="https://matviy.pp.ua">Node.js</a></li>
@@ -387,8 +376,8 @@
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ WebSpirit.com.ua</h2>
 				<p class="time">
-					<time>2022-06</time> - <time>2022-06</time>
-					<br>(<span id="webspirit" style="color: #fff;"></span>)
+					<span id="webspirit_info" style="color: #fff;"></span>
+					<br>( <span id="webspirit" style="color: #fff;"></span>)
 				</p>
 				<p>
 					I work with the php framework WhiteLion, which is similar to Laravel, Yii2. Evaluation and
@@ -402,8 +391,8 @@
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ SoftSprint.net</h2>
 				<p class="time">
-					<time>2020-11</time> - <time>2022-06</time>
-					<br>(<span id="softsprint" style="color: #fff;"></span>)
+					<span id="softsprint_info" style="color: #fff;"></span>
+					<br>( <span id="softsprint" style="color: #fff;"></span>)
 				</p>
 				<p>
 					I work with wordpress, prestashop. Edit and create new themes
@@ -420,7 +409,7 @@
 					Fullstack Engineer/ Freelance/ Programist.Top/ aPartner.Top
 				</h2>
 				<p class="time">
-					<time>2020-09</time> - present
+					<time class="start">2020-09</time> - present
 				</p>
 				<p>
 					I work here after my main job. Website development on Wordpress. (HTML/ CSS/ SCSS/ SASS/
@@ -433,9 +422,8 @@
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ Sure Lock &amp; key LLC</h2>
 				<p class="time">
-					<time>2020-05</time> - <time>2020-09</time>
-					<br>(
-					<span id="surelockkey" style="color: #fff;"></span>)
+					<span id="surelockkey_info" style="color: #fff;"></span>
+					<br>( <span id="surelockkey" style="color: #fff;"></span>)
 				</p>
 				<p>
 					Website development in Wordpress for the company. (HTML5/
@@ -448,8 +436,8 @@
 			<div class="content">
 				<h2>Web development/ Fulltime/ company "Your Store"</h2>
 				<p class="time">
-					<time>2019-03</time> - <time>2019-05</time>
-					<br>(<span id="yourstore" style="color: #fff;"></span>)
+					<span id="yourstore_info" style="color: #fff;"></span>
+					<br>( <span id="yourstore" style="color: #fff;"></span>)
 				</p>
 				<p>
 					Creating sites on WordPress, also used the Elementor plugin.
@@ -462,8 +450,8 @@
 			<div class="content">
 				<h2>Front-end Engineer/ Fulltime/ Lovecoffee.pl</h2>
 				<p class="time">
-					<time>2019-01</time> - <time>2019-02</time>
-					<br>(<span id="lovecoffee" style="color: #fff;"></span>)
+					<span id="lovecoffee_info" style="color: #fff;"></span>
+					<br>( <span id="lovecoffee" style="color: #fff;"></span>)
 				</p>
 				<p>
 					It was remote work, working an average of 7 - 9 hours a day.
@@ -482,7 +470,7 @@
 	<script src="assets/dist/index.js"></script> -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			timeToCurrent('all-time', '2020-03-01');
+			timeToCurrent('all_time', '2020-03-01');
 			timeToCurrent('webspirit', '2022-06-01');
 			timeToCurrent('softsprint', '2020-11-05', '2022-06-01');
 			timeToCurrent('surelockkey', '2020-05-01', '2020-09-01');
@@ -517,6 +505,23 @@
 		// element = id element
 		function timeToCurrent(element, datestart, dateend = 0) {
 			var res = document.getElementById(element);
+			var closest = res.closest('.container');
+
+			if (closest) {
+				var info_block = document.getElementById(`${element}_info`);
+				if (info_block) {
+					var start = datestart.slice(0, -3);
+
+					if (dateend) {
+						var end = dateend.slice(0, -3);
+						end = `<time>${end}</time>`;
+					} else {
+						end = 'present';
+					}
+					info_block.innerHTML = `<time>${start}</time > - ${end}`;
+				}
+			}
+
 			var dateend = dateend ? new Date(dateend) : new Date();
 			var old = new Date(datestart); //2019-04-01'
 			var days = Math.ceil(Math.abs(old.getTime() - dateend.getTime()) / (1000 * 3600 * 24));
