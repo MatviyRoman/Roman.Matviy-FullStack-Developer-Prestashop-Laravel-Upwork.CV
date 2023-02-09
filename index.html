@@ -385,7 +385,7 @@
 	</section>
 	<section class="wrapper timeline">
 		<div class="h2 title">TIMELINE</div>
-		<div class="container right">
+		<div class="container left">
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ WebSpirit.com.ua</h2>
 				<p class="time">
@@ -400,7 +400,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="container left">
+		<div class="container right">
 			<div class="content">
 				<h2>Fullstack Engineer/ Fulltime/ SoftSprint.net</h2>
 				<p class="time">
@@ -413,21 +413,6 @@
 					frontend development. Evaluation and performance of tasks in the estimated time. (Wordpress/
 					Prestashop/ HTML5/ CSS3/
 					SASS/ SCSS/ JS/ jQuery/ AJAX/ PHP/ Smarty/ Twig/ SQL/ MySQL/ Figma/ Git/ Gitlab/ Github)
-				</p>
-			</div>
-		</div>
-		<div class="container right">
-			<div class="content">
-				<h2>
-					Fullstack Engineer/ Freelance/ Programist.Top/ aPartner.Top
-				</h2>
-				<p class="time">
-					<time class="start">2020-09</time> - present
-				</p>
-				<p>
-					I work here after my main job. Website development on Wordpress. (HTML/ CSS/ SCSS/ SASS/
-					PHP/ Twig/ Smarty/
-					SQL/ ACF/ JS/ jQuery/ AJAX/ Laravel.Mix)
 				</p>
 			</div>
 		</div>
@@ -447,6 +432,22 @@
 		</div>
 		<div class="container right">
 			<div class="content">
+				<h2>
+					Fullstack Engineer/ Freelance/ Programist.Top/ aPartner.Top
+				</h2>
+				<p class="time">
+					<span id="apartner_info" style="color: #fff;"></span>
+					<br>( <span id="apartner" style="color: #fff;"></span>)
+				</p>
+				<p>
+					Website development on Wordpress. (HTML/ CSS/ SCSS/ SASS/
+					PHP/ Twig/ Smarty/
+					SQL/ ACF/ JS/ jQuery/ AJAX/ Laravel.Mix)
+				</p>
+			</div>
+		</div>
+		<div class="container left">
+			<div class="content">
 				<h2>Web development/ Fulltime/ company "Your Store"</h2>
 				<p class="time">
 					<span id="yourstore_info" style="color: #fff;"></span>
@@ -459,9 +460,9 @@
 				</p>
 			</div>
 		</div>
-		<div class="container left">
+		<div class="container right">
 			<div class="content">
-				<h2>Front-end Engineer/ Fulltime/ Lovecoffee.pl</h2>
+				<h2>Front-end Engineer/ Freelance/ Fulltime/ Lovecoffee.pl</h2>
 				<p class="time">
 					<span id="lovecoffee_info" style="color: #fff;"></span>
 					<br>( <span id="lovecoffee" style="color: #fff;"></span>)
@@ -486,9 +487,10 @@
 			timeToCurrent('all_time', '2020-03-01');
 			timeToCurrent('webspirit', '2022-06-01');
 			timeToCurrent('softsprint', '2020-11-05', '2022-06-01');
-			timeToCurrent('surelockkey', '2020-05-01', '2020-09-01');
-			timeToCurrent('yourstore', '2019-03-01', '2019-04-30');
-			timeToCurrent('lovecoffee', '2019-01-01', '2019-02-01');
+			timeToCurrent('surelockkey', '2020-05-01', '2020-11-01');
+			timeToCurrent('apartner', '2019-07-01', '2020-05-01');
+			timeToCurrent('yourstore', '2019-03-01', '2019-07-01');
+			timeToCurrent('lovecoffee', '2018-12-01', '2019-03-01');
 			var d = new Date();
 			var n = d.getFullYear();
 			document.getElementById('year').innerHTML = n;
