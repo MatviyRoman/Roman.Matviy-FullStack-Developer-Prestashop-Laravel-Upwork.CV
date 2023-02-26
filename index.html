@@ -542,16 +542,20 @@
 			var year = Math.floor(days / 365);
 			var months = Math.floor((days - (year * 365)) / 30);
 			var text = '';
-			if (year > 1) {
-				text += year + ' years ';
-			} else if (year) {
-				text += year + ' year ';
+
+			if (months == 12) {
+				year = ++year;
+				months = false;
 			}
+
+			text += year > 1 ? year + ' years ' : year + ' year ';
+
 			if (months > 1) {
 				text += months + ' months ';
 			} else if (months) {
 				text += months + ' month ';
 			}
+
 			res.innerHTML = text;
 		}
 	</script>
