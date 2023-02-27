@@ -548,12 +548,12 @@
 				months = false;
 			}
 
-			text += year > 1 ? year + ' years ' : year + ' year ';
+			if (year) {
+				text += year > 1 ? year + ' years ' : year + ' year ';
+			}
 
-			if (months > 1) {
-				text += months + ' months ';
-			} else if (months) {
-				text += months + ' month ';
+			if (months) {
+				text += months > 1 ? months + ' months ' : months + ' month ';
 			}
 
 			res.innerHTML = text;
