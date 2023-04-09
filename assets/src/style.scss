@@ -309,6 +309,12 @@ body {
         margin-top: 5px;
       }
     }
+
+    .icon {
+      &::before {
+        width: 16px;
+      }
+    }
   }
 
   .phoneHide {
@@ -420,7 +426,8 @@ body {
         border-radius: 3px;
         transition: background 0.8s;
 
-        &:hover {
+        &:hover,
+        &.active {
           background: $base-color-third;
         }
       }
