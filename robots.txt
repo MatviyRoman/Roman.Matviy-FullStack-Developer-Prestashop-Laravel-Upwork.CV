@@ -1,5 +1,7 @@
 User-agent: *
 #Allow: /
 Disallow:
+Disallow: /index.html
 
 Sitemap: https://roman.matviy.pp.ua/sitemap.xml
+Sitemap: https://roman.matviy.pp.ua/sitemap.html
