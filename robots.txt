@@ -1,7 +1,5 @@
 User-agent: *
-#Allow: /
-Disallow:
-Disallow: /index.html
+Allow: /
 Disallow: /cdn-cgi/l/email-protection
 
 Sitemap: https://roman.matviy.pp.ua/sitemap.xml
