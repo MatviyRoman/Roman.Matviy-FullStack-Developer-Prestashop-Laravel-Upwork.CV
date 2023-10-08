@@ -65,7 +65,7 @@ body {
 	box-shadow: 0px 5px 5px 3px $base-color-second;
 
 	@include s(0, 650px) {
-		padding: 1.5em 2em;
+		padding: 1.5em 1em;
 	}
 
 	@include s(0, 400px) {
@@ -73,25 +73,42 @@ body {
 	}
 }
 
-.download-cv {
-	position: absolute;
-	left: 50%;
-	top: 15px;
-	transform: translateX(-50%);
-	display: flex;
-	justify-content: center;
-	max-height: 40px;
-	height: 100%;
-	padding: 10px;
-	background: $base-color-second;
-	color: $base-color-fourth;
-	text-transform: uppercase;
-	transition: all 1s;
-	border-radius: 5px;
-	white-space: nowrap;
 
-	&:hover {
-		background: $base-color-first;
+.hire {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+
+	.wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background: $base-color-fourth;
+		box-shadow: 0 0px 5px 3px $base-color-first;
+		padding: 0;
+
+		.link_load {
+			display: flex;
+			justify-content: center;
+			max-width: 170px;
+			width: 100%;
+			max-height: 40px;
+			height: 100%;
+			padding: 10px;
+			background: $base-color-second;
+			color: $base-color-fourth;
+			text-transform: uppercase;
+			transition: all 1s;
+			border-radius: 5px;
+			white-space: nowrap;
+			margin: 10px;
+
+			&:hover {
+				background: $base-color-first;
+			}
+		}
 	}
 }
 
@@ -164,6 +181,13 @@ body {
 
 	.text {
 		color: $base-color-fourth;
+		span {
+			color: $base-color-fourth;
+		}
+
+		.goToBlock {
+			text-decoration: underline;
+		}
 	}
 
 	.logo {
@@ -267,11 +291,8 @@ body {
 
 		.right {
 			@include s(0, 650px) {
-				text-align: right;
-
 				li {
 					display: flex;
-					flex-direction: row-reverse;
 
 					a {
 						padding-right: 15px;
@@ -413,7 +434,7 @@ body {
 	.skills {
 		li {
 			display: inline-block;
-			margin-left: 10px;
+			margin-right: 10px;
 
 			@include s(0, 300px) {
 				width: 99%;
@@ -637,7 +658,8 @@ body {
 .timeline .content strong,
 .timeline .content b,
 .timeline .content h2,
-.timeline .content time {
+.timeline .content time,
+.timeline .content .time span {
 	color: #fff;
 }
 
