@@ -96,6 +96,8 @@ body {
 		.link_load {
 			display: flex;
 			justify-content: center;
+			align-items: center;
+
 			max-width: 170px;
 			width: 100%;
 			max-height: 40px;
@@ -111,6 +113,10 @@ body {
 
 			&:hover {
 				background: $base-color-first;
+			}
+
+			.title {
+				color: $base-color-fourth;
 			}
 		}
 	}
