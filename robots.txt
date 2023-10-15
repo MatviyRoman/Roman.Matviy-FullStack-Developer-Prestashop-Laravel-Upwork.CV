@@ -3,4 +3,3 @@ Allow: /
 Disallow: /cdn-cgi/l/email-protection
 
 Sitemap: https://roman.matviy.pp.ua/sitemap.xml
-Sitemap: https://roman.matviy.pp.ua/sitemap.html
