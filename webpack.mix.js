@@ -2,14 +2,14 @@ require('laravel-mix-string-replace');
 
 const mix = require('laravel-mix'),
 	theme_info = `/*
-  * Theme Name: test
+  * Theme Name: Roman Matviy Fullstack Developer Programmer
   * Version: 1.0.0
   * Requires at least: 4.7
   * Requires PHP: 7.4
  */`,
 	dev = 'assets/src',
 	prod = 'assets/dist',
-	host = 'file:///D:/resume/Roman.Matviy.CV/index.full.html',
+	host = 'http://roman.matviy.localhost',
 	disableNotifications = false, // disable Notifications after build
 	del = require('del'),
 	imagemin = false, // 1,2, or false
