@@ -20,10 +20,18 @@
 	<link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" as="font"
 		onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
+		<link rel="preload" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" as="font">
 		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	</noscript>
-	<link rel="stylesheet" href="assets/dist/style.min.css?ver=2" />
+
+	<link rel="preload" href="assets/dist/style.min.css" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
 	<!--<link rel="stylesheet" href="assets/dist/style.css" />-->
+	<noscript>
+		<link rel="preload" href="assets/dist/style.min.css" as="style" />
+		<link rel="stylesheet" href="assets/dist/style.min.css">
+	</noscript>
+
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 	<meta name="twitter:card" content="summary">
