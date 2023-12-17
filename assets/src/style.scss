@@ -44,20 +44,16 @@ body {
 	background-color: #474e5d;
 	padding: 4em 1.3em 3em;
 
-	@include s(0, 650px) {
-		padding: 4em 1.3em 3em;
+	@include s(0, 768px) {
+		padding: 1em 1.3em 5em;
 	}
 
 	@include s(0, 400px) {
-		padding: 4em 1em 2em;
-	}
-
-	@include s(0, 379px) {
-		padding: 6em 1em 2em;
+		padding: 1em 1em 5em;
 	}
 
 	@include s(0, 300px) {
-		padding: 6em 0 0;
+		padding: 0 0 5em;
 	}
 }
 
@@ -86,6 +82,11 @@ body {
 	width: 100%;
 	z-index: 1000;
 
+	@include s(0, 768px) {
+		top: auto;
+		bottom: 0;
+	}
+
 	.wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -93,6 +94,10 @@ body {
 		background: $base-color-fourth;
 		box-shadow: 0 0px 5px 3px $base-color-first;
 		padding: 0;
+
+		@include s(0, 380px) {
+			flex-wrap: nowrap;
+		}
 
 		.link_load {
 			display: flex;
@@ -112,12 +117,30 @@ body {
 			white-space: nowrap;
 			margin: 10px;
 
+			@include s(0, 380px) {
+				width: calc(50% - 5px);
+				margin: 10px 5px 10px 10px;
+
+				+ .link_load {
+					margin: 10px 10px 10px 5px;
+				}
+			}
+
+			@include s(0, 350px) {
+				font-size: $font-size - 2px;
+			}
+
+			@include s(0, 300px) {
+				font-size: $font-size - 3px;
+			}
+
 			&:hover {
 				background: $base-color-first;
 			}
 
 			.title {
 				color: $base-color-fourth;
+				font-size: inherit;
 			}
 		}
 	}
@@ -447,10 +470,6 @@ body {
 			display: inline-block;
 			margin-right: 10px;
 
-			@include s(0, 300px) {
-				width: 99%;
-			}
-
 			a {
 				display: block;
 				background: $base-color-second;
@@ -458,6 +477,10 @@ body {
 				padding: 5px 10px;
 				border-radius: 3px;
 				transition: background 0.8s;
+
+				@include s(0, 300px) {
+					font-size: $font-size - 3px;
+				}
 
 				&:hover,
 				&.active {
@@ -563,8 +586,7 @@ body {
 	}
 }
 
-// timeline start
-/* The actual timeline (the vertical ruler) */
+/* timeline start */
 .timeline {
 	position: relative;
 
@@ -731,5 +753,28 @@ body {
 @include s(0, 650px) {
 	.wrapper.timeline {
 		padding: 2em 15px 2em 3em;
+	}
+}
+
+@include s(0, 375px) {
+	.wrapper.timeline {
+		padding: 2em 15px 0 2em;
+
+		/* left line */
+		&::after {
+			left: 18px;
+		}
+
+		/* item */
+		.item {
+
+			/* circle */
+			&::after {
+				height: 20px;
+				width: 20px;
+				left: -32px !important;
+				top: 18px;
+			}
+		}
 	}
 }
