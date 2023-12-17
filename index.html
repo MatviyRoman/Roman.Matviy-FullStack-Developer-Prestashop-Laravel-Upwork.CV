@@ -25,7 +25,11 @@
 		<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	</noscript>-->
 
-	<link rel="stylesheet" href="assets/icons/style.min.css">
+	<link rel="preload" href="assets/icons/fonts/icons.ttf" as="font">
+	<link rel="preload" href="assets/icons/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="assets/icons/style.min.css">
+	</noscript>
 
 	<link rel="preload" href="assets/dist/style.min.css" as="style" />
 	<link rel="stylesheet" href="assets/dist/style.min.css">
