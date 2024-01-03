@@ -795,7 +795,7 @@
 
 			// Filter the parameter value to include only alphanumeric characters
 			if (parameterValue) {
-				parameterValue = parameterValue.replace(/[^a-zA-Z0-9-_]/g, '');
+				parameterValue = parameterValue.replace(/[^a-zA-Z0-9-_ ]/g, '');
 			}
 
 			// Update the canonical link with the parameter value
