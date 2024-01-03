@@ -18,7 +18,7 @@
 	<meta name="keywords"
 		content="Roman, Matviy, Matvii, Full-stack, fullstack laravel, Full-stack php, Full-stack developer, Fullstack, Fullstack php, Fullstack developer, prestashop freelancer, freelance, prestashop SEO, swagger, prestashop page speed optimize, prestashop fix error 500, backend, frontent, backend engineer frontent engineer, PHP, SQL, MySQL, HTML, CSS, SCSS, SASS, JS, jQuery, API, Ajax, Bootstrap, Flexbox, Git, Github, Gitlab, BEM, JSON, Figma, Avocode, Photoshop, SSH, SFTP, FTP, Command line, WordPress/Multi site, Prestashop/Multi site, Elementor, Carbon Fields, ACF, UI/UX, Twig, Smarty, Webpack, Laravel.Mix, Gulp, Trello, Asana, vue.js, vue3.js, Розробка сайтів, створення сайтів Львів, SEO, просування сайтів, розкрутка сайтів, веб-дизайн, інтернет-реклама, сайт-візитка, інтернет-магазин, корпоративний сайт, Site development, site creation Lviv, SEO, site promotion, site promotion, web design, internet advertising, business card site, online store, corporate site, php5, php7, php8, PageSpeed">
 	<meta name="copyright" content="Roman Matviy FullStack Developer Laravel Prestashop, Wordpress, PHP, SQL, VUE)">
-	<link rel="canonical" href="https://roman.matviy.pp.ua" />
+	<link rel="canonical" href="https://roman.matviy.pp.ua" id="canonicalLink" />
 
 	<link rel="stylesheet" href="assets/dist/style.min.css?ver=2">
 
@@ -49,7 +49,7 @@
 			<div class="text-wrapper">
 				<a class="link" href="https://roman.matviy.pp.ua">
 					<h2 class="full-name">Roman Matviy</h2>
-					<h1 class="title">FullStack Developer (Laravel, Prestashop, Wordpress, PHP, SQL, VUE)</h3>
+					<h1 class="title" id="pageTitle">FullStack Developer (Laravel, Prestashop, Wordpress, PHP, SQL, VUE)</h3>
 				</a>
 				<h2 class="text">
 					Currently, my commercial experience spans <span id="all_time"></span>. I work
@@ -362,6 +362,20 @@
 
 				<ul>
 					<li>
+						<a href="/certificate/img/Coding-for-Marketers-course-online-CT-CHVQU1BT.png" target="_blank"
+							rel="dofollow noreferrer opener">
+							<p>Coding for Marketers - Yeva Hyusyan Sololearn (10/2021)</p>
+							License CT-CHVQU1BT
+						</a>
+					</li>
+					<li>
+						<a href="/certificate/img/Responsive-Web-Design-course-online-CT-KTVPC9VG.png" target="_blank"
+							rel="dofollow noreferrer opener">
+							<p>Responsive Web Design - Yeva Hyusyan Sololearn (06/2021)</p>
+							License CT-KTVPC9VG
+						</a>
+					</li>
+					<li>
 						<a href="/certificate/img/Learn-elementor-wordpress-front-end-development-course-online-UC-56b1f67d.jpg" target="_blank"
 							rel="dofollow noreferrer opener">
 							<p>Learn elementor wordpress front-end development course online - Andrew William Udemy (03/2021)</p>
@@ -653,6 +667,8 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
+			// change canonical link
+			changeCanonicalLink();
 
 			// Google tag (gtag.js)
 			setTimeout(function () {
@@ -770,6 +786,35 @@
 			}
 
 			res.innerHTML = text;
+		}
+
+		function changeCanonicalLink() {
+			// Get the parameter value from the URL
+			const urlParams = new URLSearchParams(window.location.search);
+			let parameterValue = urlParams.get('s');
+
+			// Filter the parameter value to include only alphanumeric characters
+			if (parameterValue) {
+				parameterValue = parameterValue.replace(/[^a-zA-Z0-9-_]/g, '');
+			}
+
+			// Update the canonical link with the parameter value
+			const canonicalLink = document.getElementById('canonicalLink');
+			if (parameterValue) {
+				canonicalLink.href = `https://roman.matviy.pp.ua/?s=${parameterValue}`;
+
+				updateTagText(parameterValue);
+			}
+		}
+
+		function updateTagText(text) {
+			// Update the title tag
+			const pageTitle = document.title;
+			document.title = `${text} - ${pageTitle}`;
+
+			// Append the filtered parameterValue to the h1 tag
+			const pageTitleElement = document.getElementById('pageTitle');
+			pageTitleElement.textContent = `${pageTitleElement.textContent} - ${text}`;
 		}
 	</script>
 	<!-- JSON-LD script for defining fullstack developer information -->
