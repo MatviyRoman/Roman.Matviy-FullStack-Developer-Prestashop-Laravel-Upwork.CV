@@ -1,3 +1,6 @@
+nwm list
+nwm use 9.5.0
+
 npm -v 9.5.0
 node -v v16.19.1
 
