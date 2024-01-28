@@ -51,7 +51,7 @@
 					<h2 class="full-name">Roman Matviy</h2>
 					<h1 class="title" id="pageTitle">FullStack Developer (Laravel, Prestashop, Wordpress, PHP, SQL, VUE)</h3>
 				</a>
-				<h2 class="text">
+				<!--<h2 class="text">
 					Currently, my commercial experience spans <span id="all_time"></span>. I work
 					with the Laravel framework and the longer I work with it, the more I like it. I also work with the
 					WhiteLion PHP framework, which bears striking similarities to Laravel, Symfony. Additionally, I
@@ -61,6 +61,14 @@
 					block. I possess a strong
 					drive for learning
 					and growth and seek to join a talented team for mutual personal development.
+				</h2>-->
+
+				<h2 class="text">
+					With <span id="all_time"></span> of commercial experience, I am a dedicated Laravel Backend, Frontend, Fullstack Developer focused on creating efficient and scalable web solutions. My expertise lies in Laravel, PHP, Docker, API development, Postman, Composer, SQL, MySQL, Swagger, and Git. I excel in architecting and maintaining server-side functionalities to ensure the development of robust and high-performing applications. Additionally, I have hands-on experience with the YII PHP framework, which shares notable similarities with Laravel, Symfony, CakePHP and CodeIgniter. My <a href="#skills" class="goToBlock">skills</a> encompass a wide range of <a href="#skills" class="goToBlock">the
+						technologies</a>, and I am driven by a strong passion for continuous learning and growth. I am eager to contribute my skills and join a talented team to foster mutual personal development.
+					<br>
+					<br>
+					I would be delighted to collaborate on projects involving Laravel, PrestaShop, OpenCart, WordPress, WooCommerce, PHP, Vue.js, and more. Feel free to reach out to me <a href="https://t.me/RomanMatviy" target="_blank" rel="nofollow noreferrer noopener" title="Hire FullStack Developer Prestashop, Laravel, WordPress, PHP, SQL, VUE" style="text-decoration: underline;">Hire a Fullstack Developer</a>, and let's discuss how we can work together to bring your ideas to life. I'm eager for the opportunity to contribute my skills and expertise to your projects!
 				</h2>
 			</div>
 			<a href="https://t.me/RomanMatviy" target="_blank" rel="nofollow noreferrer noopener" class="logo"
@@ -348,12 +356,12 @@
 							rogue-chefs.matviy.pp.ua
 						</a>
 					</li>
-					<!-- <li>
+					<li>
 						<a href="https://gentab.matviy.pp.ua" target="_blank" rel="dofollow noreferrer">
 							<p>HTML Tables Generation (HTML/CSS/jQuery)</p>
 							gentab.matviy.pp.ua
 						</a>
-					</li> -->
+					</li>
 				</ul>
 			</div>
 
@@ -490,7 +498,7 @@
 	</section>
 	<section class="wrapper timeline">
 		<h2 class="h2 title">Experience</h2>
-		<div class="container item left" style="display: none;">
+		<div class="container item left">
 			<div class="content">
 				<h2>Backend Developer/ Laravel, PHP developer/ FullTime/ SoftDev.Fi</h2>
 				<p class="time">
@@ -655,6 +663,24 @@
 			<a href="https://t.me/RomanMatviy" target="_blank" rel="nofollow noreferrer noopener" class="link_load" title="Hire FullStack Developer Prestashop, Laravel, WordPress, PHP, SQL, VUE"><h2 class="title">Hire developer</h2></a>
 		</div>
 	</section>
+
+	<div class="modal" id="exitModal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation();">
+			<h4 class="title">Stay with me!</h4>
+            <p>
+				Thank you for visiting my website. If you have any questions or are interested in collaboration, please reach out. I'm ready to listen to your ideas and work towards the best solution for you. Your success is my priority, and I'm here to support you every step of the way. I value your interest and hope this marks the start of a successful partnership.
+				<br>
+				<br>
+				Enjoy a 10% discount on my services with promo code <strong class="promo">'DEVSTAFF10'</strong>.
+			</p>
+			<br>
+			<div class="wrapper-btn">
+				<button class="btn btn-close btn-danger" onclick="closeModal()">Closing the offer</button>
+				<a class="btn btn-contact btn-success" href="https://t.me/RomanMatviy" target="_blank" rel="nofollow noreferrer noopener" title="Hire FullStack Developer Prestashop, Laravel, WordPress, PHP, SQL, VUE">Hire a Fullstack Developer</a>
+			</div>
+        </div>
+    </div>
+
 	<footer class="footer">
 		<div class="wrapper">
 			<a href="https://matviy.pp.ua" title="FullStack Developer Laravel Prestashop WordPress PHP VUE SQL JS JavaScript" target="_blank" rel="dofollow">
@@ -692,7 +718,7 @@
 
 			timeToCurrent('all_time', '2020-03-01');
 			timeToCurrent('softdev', '2023-11-01');
-			timeToCurrent('nc_one', '2023-04-01');
+			timeToCurrent('nc_one', '2023-04-01', '2023-12-31');
 			timeToCurrent('nikos_ltv', '2023-03-01', '2023-06-31');
 			timeToCurrent('freelance', '2022-04-01', '2023-04-01');
 			timeToCurrent('webspirit', '2022-06-01', '2023-03-31');
@@ -701,6 +727,7 @@
 			timeToCurrent('apartner', '2019-07-01', '2020-05-01');
 			timeToCurrent('yourstore', '2019-03-01', '2019-07-01');
 			timeToCurrent('lovecoffee', '2018-12-01', '2019-03-01');
+
 			var d = new Date();
 			var n = d.getFullYear();
 			document.getElementById('year').innerHTML = n;
@@ -814,7 +841,66 @@
 
 			// Append the filtered parameterValue to the h1 tag
 			const pageTitleElement = document.getElementById('pageTitle');
-			pageTitleElement.textContent = `${pageTitleElement.textContent} - ${text}`;
+			pageTitleElement.textContent = `${text} - ${pageTitleElement.textContent}`;
+		}
+
+		//! Favicon
+		var favicons = [
+			'/assets/favicons/1.png',
+			'/assets/favicons/2.png',
+		];
+
+		var currentFaviconIndex = 0;
+		var intervalId; // Зберігаємо ідентифікатор інтервалу
+
+		function startFaviconAnimation() {
+			intervalId = setInterval(function() {
+				changeFavicon(favicons[currentFaviconIndex]);
+				currentFaviconIndex = (currentFaviconIndex + 1) % favicons.length;
+			}, 1000);
+		}
+
+		function stopFaviconAnimation() {
+			clearInterval(intervalId);
+			changeFavicon('favicon.ico');
+		}
+
+		//! Modal
+		document.addEventListener('visibilitychange', function() {
+			if (document.visibilityState === 'hidden') {
+				startFaviconAnimation();
+				openModal();
+			} else {
+				stopFaviconAnimation();
+			}
+		});
+
+		window.addEventListener('beforeunload', function (e) {
+			openModal();
+		});
+
+		function openModal() {
+			setTimeout(function() {
+				document.getElementById("exitModal").style.display = "flex";
+			}, 1000);
+		}
+
+		function closeModal() {
+			document.getElementById("exitModal").style.display = "none";
+		}
+
+		function changeFavicon(newFavicon) {
+			var link = document.createElement('link');
+			link.type = 'image/x-icon';
+			link.rel = 'icon';
+			link.href = newFavicon;
+
+			var existingLink = document.querySelector("link[rel*='icon']");
+			if (existingLink) {
+				document.head.removeChild(existingLink);
+			}
+
+			document.head.appendChild(link);
 		}
 	</script>
 	<!-- JSON-LD script for defining fullstack developer information -->

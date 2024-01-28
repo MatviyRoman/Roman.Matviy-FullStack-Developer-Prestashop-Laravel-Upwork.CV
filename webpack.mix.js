@@ -164,6 +164,7 @@ if (imagemin == 1) {
 // 	.js(dev + '/assets/js/jquery.instagramLoad.js', prod + '/assets/js/')
 mix.sass(dev + '/style.scss', prod + '')
 	.sass(dev + '/timeline.scss', prod + '')
+	.sass(dev + '/modal.scss', prod + '')
 	.options({
 		postCss: [
 			require('postcss-normalize-timing-functions'), //npm i postcss-normalize-timing-functions
@@ -331,23 +332,18 @@ if (
 		[
 			// other css stylesheets here...
 			prod + '/style.css', // include temp css file
-			//prod + '/assets/css/app.css', // include temp css file
+			prod + '/timeline.css', // include temp css file
+			prod + '/modal.css', // include temp css file
 		],
-		prod + '/style.min.css'
+		prod + '/style.min.css',
+		prod + '/timeline.min.css',
+		prod + '/modal.min.css'
 	).then(() => {
 		del(prod + '/style.css'); // deletes the temp file
+		del(prod + '/timeline.css'); // deletes the temp file
+		del(prod + '/modal.css'); // deletes the temp file
 	});
 
-	mix.styles(
-		[
-			// other css stylesheets here...
-			prod + '/timeline.css', // include temp css file
-			//prod + '/assets/css/app.css', // include temp css file
-		],
-		prod + '/timeline.min.css'
-	).then(() => {
-		del(prod + '/timeline.css'); // deletes the temp file
-	});
 
 	// mix.combine(
 	// 	[
