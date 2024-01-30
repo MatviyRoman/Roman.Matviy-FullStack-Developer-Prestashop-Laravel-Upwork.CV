@@ -673,7 +673,11 @@
 				<br>
 				Enjoy a 10% discount on my services with promo code <strong class="promo">'DEVSTAFF10'</strong>.
 			</p>
+
 			<br>
+			<h3 id="countdown">Time remaining for this offer: <b>3 hours</b></h3>
+			<br>
+
 			<div class="wrapper-btn">
 				<button class="btn btn-close btn-danger" onclick="closeModal()">Closing the offer</button>
 				<a class="btn btn-contact btn-success" href="https://t.me/RomanMatviy" target="_blank" rel="nofollow noreferrer noopener" title="Hire FullStack Developer Prestashop, Laravel, WordPress, PHP, SQL, VUE">Hire a Fullstack Developer</a>
@@ -865,10 +869,55 @@
 			changeFavicon('favicon.ico');
 		}
 
+		//! Countdown
+		// Функція для отримання часу, коли користувач записався
+		function getSignUpTime() {
+			const currentTime = new Date().getTime();
+			return currentTime;
+		}
+
+		// Функція для встановлення кукі з часом запису
+		function setSignUpTimeCookie() {
+			const signUpTime = getSignUpTime();
+			document.cookie = `signUpTime=${signUpTime}; expires=${new Date(signUpTime + 3 * 60 * 60 * 1000).toUTCString()}; path=/`;
+		}
+
+		// Функція для отримання часу, коли користувач повинен бути повідомлений про новий відлік
+		function getNextCountdownTime() {
+			const signUpTime = parseFloat(document.cookie.replace(/(?:(?:^|.*;\s*)signUpTime\s*=\s*([^;]*).*$)|^.*$/, "$1"));
+			return signUpTime + 3 * 60 * 60 * 1000;
+		}
+
+		// Функція для оновлення годинника
+		function updateCountdown() {
+			const currentTime = new Date().getTime();
+			const nextCountdownTime = getNextCountdownTime();
+
+			if (currentTime < nextCountdownTime) {
+				const timeDifference = nextCountdownTime - currentTime;
+				const hours = Math.floor(timeDifference / (60 * 60 * 1000));
+				const minutes = Math.floor((timeDifference % (60 * 60 * 1000)) / (60 * 1000));
+				const seconds = Math.floor((timeDifference % (60 * 1000)) / 1000);
+
+				document.getElementById('countdown').innerHTML = `Time remaining for this offer: <b class="promo">${hours} hours, ${minutes} minutes, ${seconds} seconds</b>`;
+				//document.getElementById('countdown').innerText = `Time remaining for this offer: <b>${hours} hours, ${minutes} minutes, ${seconds} seconds</b>`;
+			} else {
+				setSignUpTimeCookie();
+				updateCountdown();
+			}
+		}
+
 		//! Modal
 		document.addEventListener('visibilitychange', function() {
 			if (document.visibilityState === 'hidden') {
 				startFaviconAnimation();
+
+				// Оновлюємо годинник при завантаженні сторінки
+				updateCountdown();
+
+				// Оновлюємо годинник кожну секунду
+				setInterval(updateCountdown, 1000);
+
 				openModal();
 			} else {
 				stopFaviconAnimation();
