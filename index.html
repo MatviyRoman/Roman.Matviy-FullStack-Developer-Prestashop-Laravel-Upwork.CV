@@ -926,15 +926,29 @@
 
 		window.addEventListener('beforeunload', function () {
 			openModal();
+
+			modalClosedTime = new Date().getTime();
+			localStorage.setItem('modalClosedTime', modalClosedTime);
 		});
 
 		function openModal() {
-			setTimeout(function() {
-				document.getElementById("exitModal").style.display = "flex";
-			}, 1000);
+			let currentTime = new Date().getTime();
+			let lastModalClosedTime = localStorage.getItem('modalClosedTime');
+			if (!lastModalClosedTime || (currentTime - lastModalClosedTime) >= (60 * 60 * 1000)) {
+
+				// check if the modal is already closed
+				if (!document.body.classList.contains('closed-modal')) {
+					setTimeout(function() {
+						document.getElementById("exitModal").style.display = "flex";
+					}, 1000);
+				}
+			}
 		}
 
 		function closeModal() {
+			//location.reload();
+
+			document.body.classList.add('closed-modal');
 			document.getElementById("exitModal").style.display = "none";
 		}
 
