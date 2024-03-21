@@ -953,17 +953,20 @@
 		function openModal() {
 			let currentTime = new Date().getTime();
 			let lastModalClosedTime = localStorage.getItem('modalClosedTime');
-			if (!lastModalClosedTime || (currentTime - lastModalClosedTime) >= (60 * 60 * 1000)) {
-				// check if the modal is already closed
+
+			let shouldOpenModal = !lastModalClosedTime || (currentTime - lastModalClosedTime) >= (60 * 60 * 1000);
+
+			// Remove the closed-modal class from the body element
+			if (document.body.classList.contains('closed-modal')) {
+				document.body.classList.remove('closed-modal');
+			}
+
+			if (shouldOpenModal) {
+				// Check if the modal is already closed
 				if (!document.body.classList.contains('closed-modal')) {
-					setTimeout(function() {
+					setTimeout(() => {
 						document.getElementById("exitModal").style.display = "flex";
 					}, 1000);
-				}
-
-				// remove the closed-modal class from the body element
-				if (document.body.classList.contains('closed-modal')) {
-					document.body.classList.remove('closed-modal');
 				}
 			}
 		}
