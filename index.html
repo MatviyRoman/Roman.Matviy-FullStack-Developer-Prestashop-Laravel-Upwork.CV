@@ -182,6 +182,7 @@
 					<li><a href="https://roman.matviy.pp.ua#docker" title="Docker" class="active">Docker</a></li>
 					<li><a href="https://roman.matviy.pp.ua#dto" title="DTO">DTO</a></li>
 					<li><a href="https://roman.matviy.pp.ua#elementor" title="Wordpress Elementor">Elementor</a></li>
+					<li><a href="https://roman.matviy.pp.ua/?s=Filament-PHP-Laravel-DEV" title="Filament PHP Laravel DEV">Filament</a></li>
 					<li><a href="https://roman.matviy.pp.ua#ftp_sftp" title="FTP/SFTP">FTP/SFTP</a></li>
 					<li><a href="https://roman.matviy.pp.ua#figma" title="Figma">Figma</a></li>
 					<li><a href="https://roman.matviy.pp.ua#flexbox" title="Flexbox">Flexbox</a></li>
@@ -953,12 +954,16 @@
 			let currentTime = new Date().getTime();
 			let lastModalClosedTime = localStorage.getItem('modalClosedTime');
 			if (!lastModalClosedTime || (currentTime - lastModalClosedTime) >= (60 * 60 * 1000)) {
-
 				// check if the modal is already closed
 				if (!document.body.classList.contains('closed-modal')) {
 					setTimeout(function() {
 						document.getElementById("exitModal").style.display = "flex";
 					}, 1000);
+				}
+
+				// remove the closed-modal class from the body element
+				if (document.body.classList.contains('closed-modal')) {
+					document.body.classList.remove('closed-modal');
 				}
 			}
 		}
