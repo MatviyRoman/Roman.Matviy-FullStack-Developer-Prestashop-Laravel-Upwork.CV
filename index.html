@@ -180,13 +180,13 @@
 					<li><a href="https://roman.matviy.pp.ua/?s=Composer-Backend-Developer" title="Composer" class="active">Composer</a></li>
 
 					<li><a href="https://roman.matviy.pp.ua#cpt" title="CPT">CPT</a></li>
-					<li><a href="https://roman.matviy.pp.ua#carbon_fields" title="Carbon Fields">Carbon Fields</a></li>
 
+					<li><a href="https://roman.matviy.pp.ua/?s=Carbon-fields-Wordpress-Backend-Developer" title="Carbon Fields Wordpress Backend Developer">Carbon Fields</a></li>
 					<li><a href="https://roman.matviy.pp.ua?s=CodeIgniter-Backend-Developer" title="CodeIgniter Backend Developer">CodeIgniter</a></li>
 					<li><a href="https://roman.matviy.pp.ua?s=CLI" title="CLI (Command Line Interface)">CLI</a></li>
-					<li><a href="https://roman.matviy.pp.ua/?s=DDD-Domain-Driven-Design-Backend-Developer" title="DDD Domain Driven Design Backend Developer" class="active">DDD</a></li>
+					<li><a href="https://roman.matviy.pp.ua/?s=DDD-Domain-Driven-Design-Laravel-Backend-Developer" title="DDD Domain Driven Design Laravel Backend Developer" class="active">DDD</a></li>
+					<li><a href="https://roman.matviy.pp.ua/?s=Docker-Laravel-Backend-Developer" title="Docker Laravel Backend Developer" class="active">Docker</a></li>
 
-					<li><a href="https://roman.matviy.pp.ua#docker" title="Docker" class="active">Docker</a></li>
 					<li><a href="https://roman.matviy.pp.ua#dto" title="DTO">DTO</a></li>
 					<li><a href="https://roman.matviy.pp.ua#elementor" title="Wordpress Elementor">Elementor</a></li>
 
@@ -216,8 +216,9 @@
 					<li><a href="https://roman.matviy.pp.ua/?s=PHP-developer" title="PHP Developer" class="active">PHP</a></li>
 					<li><a href="https://roman.matviy.pp.ua/?s=Postman-Backend-Developer" title="Postman backend developer" class="active">Postman</a></li>
 					<li><a href="https://roman.matviy.pp.ua/?s=Prestashop-Backend-Frontend-Developer" title="Prestashop/Multi site" class="active">Prestashop/Multi site</a></li>
+					<li><a href="https://roman.matviy.pp.ua/?s=Rocket-LMS-Laravel-Backend-Developer" title="Rocket LMS Laravel Backend Developer" class="active">Rocket LMS</a></li>
+					<li><a href="https://roman.matviy.pp.ua/?s=REST-API-Laravel-Backend-Developer" title="REST API Laravel Backend Developer" class="active">REST API</a></li>
 
-					<li><a href="https://roman.matviy.pp.ua#rest_api" title="REST API" class="active">REST API</a></li>
 					<li><a href="https://roman.matviy.pp.ua#scss_sass" title="SCSS/SASS">SCSS/SASS</a></li>
 					<li><a href="https://roman.matviy.pp.ua#ssh" title="SSH">SSH</a></li>
 
@@ -234,10 +235,8 @@
 
 					<li><a href="https://roman.matviy.pp.ua/?s=TypeScript-Frontend-Developer" title="TypeScript Frontend Developer">TypeScript</a></li>
 					<li><a href="https://roman.matviy.pp.ua/?s=Twig-Smarty-Blade-Developer" title="Twig/Smarty/Blade Developer" class="active">Twig/Smarty/Blade</a></li>
-
-					<li><a href="https://roman.matviy.pp.ua#pug" title="PUG">PUG</a></li>
-					<li><a href="https://roman.matviy.pp.ua#vite" title="Vite">Vite</a></li>
-
+					<li><a href="https://roman.matviy.pp.ua/?s=PUG-Frontend-Developer" title="PUG Frontend Developer">PUG</a></li>
+					<li><a href="https://roman.matviy.pp.ua/?s=Vite-Laravel-Frontend-Backend-Developer" title="Vite Laravel Frontend Backend Developer">Vite</a></li>
 					<li><a href="https://roman.matviy.pp.ua/?s=VUE-JS-Frontend-Developer" title="VUE JS Frontend Developer" class="active">Vue.js</a></li>
 
 					<li><a href="https://roman.matviy.pp.ua#ui_ux" title="UI/UX">UI/UX</a></li>
@@ -896,18 +895,53 @@
 			if (parameterValue) {
 				canonicalLink.href = `https://roman.matviy.pp.ua/?s=${parameterValue}`;
 
+				// Update og:url
+				const ogUrl = document.querySelector('meta[property="og:url"]');
+				ogUrl.setAttribute('content', `https://roman.matviy.pp.ua/?s=${parameterValue}`);
+
 				updateTagText(parameterValue);
 			}
 		}
 
 		function updateTagText(text) {
+			// Replace hyphens and underscores with spaces
+			let updatedText = text.replace(/[-_]/g, ' ');
+
+			// Check if the updated text is less than 7 characters
+			if (updatedText.length < 7) {
+				updatedText += ' Fullstack Developer';
+			}
+
+			const textContent =  `${updatedText} - Roman Matviy`;
+
+			// Update the meta description
+			const metaDesc = document.querySelector('meta[name="description"]');
+			metaDesc.setAttribute('content', textContent);
+
+			// Update the og:description
+			const ogDesc = document.querySelector('meta[property="og:description"]');
+			ogDesc.setAttribute('content', textContent);
+
+			// Update the og:title
+			const ogTitle = document.querySelector('meta[property="og:title"]');
+			ogTitle.setAttribute('content', textContent);
+
+			// Update the twitter:title
+			const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+			twitterTitle.setAttribute('content', textContent);
+
+			// Update the twitter:description
+			const twitterDesc = document.querySelector('meta[name="twitter:description"]');
+			twitterDesc.setAttribute('content', textContent);
+
+			// Update the h1 tag
+			//const h1Tag = document.querySelector('h1');
+			const h1Tag = document.getElementById('pageTitle');
+			h1Tag.textContent = textContent;
+
 			// Update the title tag
 			const pageTitle = document.title;
-			document.title = `${text} - ${pageTitle}`;
-
-			// Append the filtered parameterValue to the h1 tag
-			const pageTitleElement = document.getElementById('pageTitle');
-			pageTitleElement.textContent = `${text} - ${pageTitleElement.textContent}`;
+			document.title = textContent;
 		}
 
 		//! Favicon
