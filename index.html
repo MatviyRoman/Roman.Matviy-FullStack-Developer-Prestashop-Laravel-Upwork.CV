@@ -15,7 +15,8 @@
 		content="Roman, Matviy, Matvii, Full-stack, fullstack laravel, Full-stack php, Full-stack developer, Fullstack, Fullstack php, Fullstack developer, prestashop freelancer, freelance, prestashop SEO, swagger, prestashop page speed optimize, prestashop fix error 500, backend, frontent, backend engineer frontent engineer, PHP, SQL, MySQL, HTML, CSS, SCSS, SASS, JS, jQuery, API, Ajax, Bootstrap, Flexbox, Git, Github, Gitlab, BEM, JSON, Figma, Avocode, Photoshop, SSH, SFTP, FTP, Command line, WordPress/Multi site, Prestashop/Multi site, Elementor, Carbon Fields, ACF, UI/UX, Twig, Smarty, Webpack, Laravel.Mix, Gulp, Trello, Asana, vue.js, vue3.js, Розробка сайтів, створення сайтів Львів, SEO, просування сайтів, розкрутка сайтів, веб-дизайн, інтернет-реклама, сайт-візитка, інтернет-магазин, корпоративний сайт, Site development, site creation Lviv, SEO, site promotion, site promotion, web design, internet advertising, business card site, online store, corporate site, php5, php7, php8, PageSpeed">
 	<meta name="copyright" content="Roman Matviy FullStack Developer Laravel Prestashop, Wordpress, PHP, SQL, VUE)">
 	<link rel="canonical" href="https://roman.matviy.pp.ua" id="canonicalLink" />
-	<link rel="stylesheet" href="assets/dist/style.min.css?ver=3">
+	<!--<link rel="stylesheet" href="assets/dist/style.css?ver=4">-->
+	<link rel="stylesheet" href="assets/dist/style.min.css?ver=4">
 	<!--<link rel="preload" href="assets/icons/fonts/icons.ttf" as="font">-->
 	<link rel="preload" href="assets/icons/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript>
@@ -719,7 +720,7 @@
 				Thank you for visiting my website. If you have any questions or are interested in collaboration, please reach out. I'm ready to listen to your ideas and work towards the best solution for you. Your success is my priority, and I'm here to support you every step of the way. I value your interest and hope this marks the start of a successful partnership.
 				<br>
 				<br>
-				Enjoy a 10% discount on my services with promo code <strong class="promo">'DEVSTAFF10'</strong>.
+				Enjoy a 10% discount on my services with promo code <strong class="promo">'HireRomanDev'</strong>.
 			</p>
 
 			<br>
@@ -982,11 +983,16 @@
 				const seconds = Math.floor((timeDifference % (60 * 1000)) / 1000);
 
 				document.getElementById('countdown').innerHTML = `Time remaining for this offer: <b class="promo">${hours} hours, ${minutes} minutes, ${seconds} seconds</b>`;
-				//document.getElementById('countdown').innerText = `Time remaining for this offer: <b>${hours} hours, ${minutes} minutes, ${seconds} seconds</b>`;
 			} else {
 				setSignUpTimeCookie();
 				updateCountdown();
 			}
+		}
+
+		// Set the modal closed time to local storage when the modal is closed
+		function setModalCloseTime() {
+			modalClosedTime = new Date().getTime();
+			localStorage.setItem('modalClosedTime', modalClosedTime);
 		}
 
 		//! Modal
@@ -1008,16 +1014,19 @@
 
 		window.addEventListener('beforeunload', function () {
 			openModal();
-
-			modalClosedTime = new Date().getTime();
-			localStorage.setItem('modalClosedTime', modalClosedTime);
+			setModalCloseTime();
 		});
 
 		function openModal() {
 			let currentTime = new Date().getTime();
 			let lastModalClosedTime = localStorage.getItem('modalClosedTime');
 
-			let shouldOpenModal = !lastModalClosedTime || (currentTime - lastModalClosedTime) >= (60 * 60 * 1000);
+			//let shouldOpenModal = !lastModalClosedTime || (currentTime - lastModalClosedTime) >= (60 * 60 * 1000);
+			let shouldOpenModal = !lastModalClosedTime || (currentTime - lastModalClosedTime) >= (15 * 60 * 1000);
+
+
+			console.log(lastModalClosedTime);
+			console.log(shouldOpenModal);
 
 			// Remove the closed-modal class from the body element
 			if (document.body.classList.contains('closed-modal')) {
@@ -1027,6 +1036,10 @@
 			if (shouldOpenModal) {
 				// Check if the modal is already closed
 				if (!document.body.classList.contains('closed-modal')) {
+
+					// Remove the closed time from local storage
+					localStorage.removeItem('modalClosedTime');
+
 					setTimeout(() => {
 						document.getElementById("exitModal").style.display = "flex";
 					}, 1000);
@@ -1036,6 +1049,7 @@
 
 		function closeModal() {
 			//location.reload();
+			setModalCloseTime();
 
 			document.body.classList.add('closed-modal');
 			document.getElementById("exitModal").style.display = "none";
