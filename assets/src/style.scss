@@ -758,7 +758,7 @@ body {
 
 @include s(0, 375px) {
 	.wrapper.timeline {
-		padding: 2em 15px 0 2em;
+		padding: 2em 15px 0 2em !important;
 
 		/* left line */
 		&::after {
