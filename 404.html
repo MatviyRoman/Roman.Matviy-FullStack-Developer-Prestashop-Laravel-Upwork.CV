@@ -108,22 +108,6 @@
 			document.getElementById('year').innerHTML = n;
 			var url_string = window.location.href
 			var url = new URL(url_string);
-
-			//! Smooth Scrolling goToBlock
-			const links = document.querySelectorAll('.goToBlock');
-
-			links.forEach(link => {
-				link.addEventListener('click', function (event) {
-					event.preventDefault();
-
-					const targetId = link.getAttribute('href');
-					const targetSection = document.querySelector(targetId);
-
-					if (targetSection) {
-						targetSection.scrollIntoView({ behavior: 'smooth' });
-					}
-				});
-			});
 		});
 
 		//! Favicon
