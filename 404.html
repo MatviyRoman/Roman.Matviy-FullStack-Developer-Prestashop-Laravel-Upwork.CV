@@ -7,14 +7,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="content-language" content="en">
 	<meta name="robots" content="all">
-	<title>Roman M. - FullStack Developer Laravel Prestashop WordPress PHP VUE SQL</title><!-- max 70 -->
-	<meta name="description"
-		content="Roman Matviy - Hire FullStack Developer Laravel, Prestashop, Wordpress themes and plugins. Skills: PHP, SQL, VUE, MySQL, HTML, CSS, JS, jQuery, Ajax, Bootstrap, Flexbox, Git, JSON, Figma, Avocode, Multi site, Carbon Fields, ACF, Blade, Twig, Smarty"><!-- max 160 -->
-	<!-- <meta name="description" content="Roman Matviy FullStack Developer. Creation and comprehensive promotion of Lviv and Ukraine sites. Starting an online business, developing a website, a turnkey online store.Створення та комплексне просуванням сайтів Львів та Україна. Запуск бізнесу онлайн, розробка сайту, інтернет магазину під ключ."> -->
-	<meta name="keywords"
-		content="Roman, Matviy, Matvii, Full-stack, fullstack laravel, Full-stack php, Full-stack developer, Fullstack, Fullstack php, Fullstack developer, prestashop freelancer, freelance, prestashop SEO, swagger, prestashop page speed optimize, prestashop fix error 500, backend, frontent, backend engineer frontent engineer, PHP, SQL, MySQL, HTML, CSS, SCSS, SASS, JS, jQuery, API, Ajax, Bootstrap, Flexbox, Git, Github, Gitlab, BEM, JSON, Figma, Avocode, Photoshop, SSH, SFTP, FTP, Command line, WordPress/Multi site, Prestashop/Multi site, Elementor, Carbon Fields, ACF, UI/UX, Twig, Smarty, Webpack, Laravel.Mix, Gulp, Trello, Asana, vue.js, vue3.js, Розробка сайтів, створення сайтів Львів, SEO, просування сайтів, розкрутка сайтів, веб-дизайн, інтернет-реклама, сайт-візитка, інтернет-магазин, корпоративний сайт, Site development, site creation Lviv, SEO, site promotion, site promotion, web design, internet advertising, business card site, online store, corporate site, php5, php7, php8, PageSpeed">
+	<title>404 Not Found – Roman M. - FullStack Developer Laravel Prestashop</title><!-- max 70 -->
+	<meta name="description" content="This page could not be found. Go back to the homepage to continue browsing Roman Matviy's developer portfolio."><!-- max 160 -->
 	<meta name="copyright" content="Roman Matviy FullStack Developer Laravel Prestashop, Wordpress, PHP, SQL, VUE)">
-	<link rel="canonical" href="https://roman.matviy.pp.ua" id="canonicalLink" />
+	<link rel="canonical" href="https://roman.matviy.pp.ua/404" />
 	<!--<link rel="stylesheet" href="assets/dist/style.css?ver=4">-->
 	<link rel="stylesheet" href="assets/dist/style.min.css?ver=4">
 	<!--<link rel="preload" href="assets/icons/fonts/icons.ttf" as="font">-->
@@ -26,14 +22,14 @@
 
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:image" content="https://roman.matviy.pp.ua/assets/img/photo.jpg">
-	<meta name="twitter:site" content="Roman Matviy FullStack Developer Laravel Prestashop, Wordpress, PHP, SQL, VUE)" />
-	<meta name="twitter:title" content="Roman Matviy - Hire FullStack Developer Laravel, Prestashop, WordPress, PHP, SQL, VUE">
-	<meta name="twitter:description" content="Roman Matviy - Hire FullStack Developer Laravel, Prestashop, Wordpress themes and plugins. Skills: PHP, SQL, VUE, MySQL, HTML, CSS, JS, jQuery, Ajax, Bootstrap, Flexbox, Git, JSON, Figma, Avocode, Multi site, Carbon Fields, ACF, Blade, Twig, Smarty">
+	<meta name="twitter:site" content="404 Not Found – Roman Matviy">
+	<meta name="twitter:title" content="404 Not Found – Roman Matviy">
+	<meta name="twitter:description" content="Page not found – Go back to Roman Matviy’s homepage.">
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Roman Matviy - Hire FullStack Developer Laravel, Prestashop, WordPress, PHP, SQL, VUE">
-	<meta property="og:description" content="Roman Matviy - Hire FullStack Developer Laravel, Prestashop, WordPress, PHP, SQL, VUE">
-	<meta property="og:url" content="https://roman.matviy.pp.ua/">
+	<meta property="og:title" content="404 Not Found – Roman Matviy">
+	<meta property="og:description" content="This page could not be found. Return to the homepage to continue browsing.">
+	<meta property="og:url" content="https://roman.matviy.pp.ua/404">
 	<meta property="og:image" content="https://roman.matviy.pp.ua/assets/img/photo.jpg">
 </head>
 
@@ -87,9 +83,6 @@
 	</footer>
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			// change canonical link
-			changeCanonicalLink();
-
 			// Google tag (gtag.js)
 			setTimeout(function () {
 				// Load Google Tag Manager script
@@ -143,75 +136,6 @@
 				});
 			});
 		});
-
-		// datestart = date start 2019-04-01
-		// dateend = date end 2019-04-01
-		// element = id element
-
-
-		function changeCanonicalLink() {
-			// Get the parameter value from the URL
-			const urlParams = new URLSearchParams(window.location.search);
-			let parameterValue = urlParams.get('s');
-
-			// Filter the parameter value to include only alphanumeric characters
-			if (parameterValue) {
-				parameterValue = parameterValue.replace(/[^a-zA-Z0-9-_ .]/g, '');
-			}
-
-			// Update the canonical link with the parameter value
-			const canonicalLink = document.getElementById('canonicalLink');
-			if (parameterValue) {
-				canonicalLink.href = `https://roman.matviy.pp.ua/?s=${parameterValue}`;
-
-				// Update og:url
-				const ogUrl = document.querySelector('meta[property="og:url"]');
-				ogUrl.setAttribute('content', `https://roman.matviy.pp.ua/?s=${parameterValue}`);
-
-				updateTagText(parameterValue);
-			}
-		}
-
-		function updateTagText(text) {
-			// Replace hyphens and underscores with spaces
-			let updatedText = text.replace(/[-_]/g, ' ');
-
-			// Check if the updated text is less than 7 characters
-			if (updatedText.length < 7) {
-				updatedText += ' Fullstack Developer';
-			}
-
-			const textContent =  `${updatedText} - Roman Matviy`;
-
-			// Update the meta description
-			const metaDesc = document.querySelector('meta[name="description"]');
-			metaDesc.setAttribute('content', textContent);
-
-			// Update the og:description
-			const ogDesc = document.querySelector('meta[property="og:description"]');
-			ogDesc.setAttribute('content', textContent);
-
-			// Update the og:title
-			const ogTitle = document.querySelector('meta[property="og:title"]');
-			ogTitle.setAttribute('content', textContent);
-
-			// Update the twitter:title
-			const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-			twitterTitle.setAttribute('content', textContent);
-
-			// Update the twitter:description
-			const twitterDesc = document.querySelector('meta[name="twitter:description"]');
-			twitterDesc.setAttribute('content', textContent);
-
-			// Update the h1 tag
-			//const h1Tag = document.querySelector('h1');
-			const h1Tag = document.getElementById('pageTitle');
-			h1Tag.textContent = textContent;
-
-			// Update the title tag
-			const pageTitle = document.title;
-			document.title = textContent;
-		}
 
 		//! Favicon
 		var favicons = [
