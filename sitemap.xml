@@ -5,12 +5,109 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
+<!-- РЕАЛЬНІ СТОРІНКИ -->
 <url>
   <loc>https://roman.matviy.pp.ua/</loc>
   <lastmod>2024-10-26T08:27:37+00:00</lastmod>
   <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://roman.matviy.pp.ua/about.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/laravel/</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/laravel/index.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/laravel-backend-frontend-developer/</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/laravel-backend-frontend-developer/index.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/laravel-php-backend-frontend-fullstack-lviv-developer/</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/laravel-php-backend-frontend-fullstack-lviv-developer/index.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/prestashop/</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/prestashop/index.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/prestashop-backend-frontend-developer/</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/prestashop-backend-frontend-developer/index.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/img/Coding-for-Marketers-course-online-CT-CHVQU1BT.png</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/img/Learn-elementor-wordpress-front-end-development-course-online-UC-56b1f67d.jpg</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/img/Learn-how-to-build-an-e-commerce-web-site-by-prestashop-online-course-UC-QC4ND1WG.jpg</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/img/Modules-developer-guide-for-prestashop-online-course-UC-1I45RK12.jpg</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/img/Responsive-Web-Design-course-online-CT-KTVPC9VG.png</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/img/Themes-developer-guide-for-prestashop-online-course-UC-KP4RCSBJ.jpg</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/certificate/pdf/Themes-developer-guide-for-prestashop-online-course-UC-KP4RCSBJ.pdf</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://roman.matviy.pp.ua/404.html</loc>
+  <lastmod>2024-04-27T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<!-- ПОШУКОВІ СТОРІНКИ -->
 <url>
   <loc>https://roman.matviy.pp.ua/?s=Wordpress-ACF-Backend-Frontend-Developer</loc>
   <lastmod>2024-10-26T08:27:37+00:00</lastmod>
@@ -171,6 +268,5 @@
   <lastmod>2024-10-26T08:27:37+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>
