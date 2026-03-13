@@ -788,16 +788,24 @@
 			var show = url.searchParams.get('show');
 			if (show == 1) {
 				var div = document.getElementsByClassName('phoneHide');
-				div[0].style.display = 'block';
+				if (div.length > 0) {
+                    div[0].style.display = 'block';
+				}
 
 				var div = document.getElementsByClassName('phoneShow');
-				div[0].style.display = 'none';
+				if (div.length > 0) {
+					div[0].style.display = 'none';
+				}
 
 				var link = document.getElementsByClassName('download-cv');
-				link[0].style.display = 'none';
+				if (link.length > 0) {
+					link[0].style.display = 'none';
+				}
 
 				var hireLink = document.getElementsByClassName('hire');
-				hireLink[0].style.display = 'none';
+				if (hireLink.length > 0) {
+					hireLink[0].style.display = 'none';
+				}
 			}
 			var phoneHide = document.getElementById('phoneHide');
 			var phoneShow = document.getElementById('phoneShow');
