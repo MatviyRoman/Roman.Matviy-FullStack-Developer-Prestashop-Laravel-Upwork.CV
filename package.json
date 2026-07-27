@@ -27,7 +27,7 @@
     "css-declaration-sorter": "^5.1.2",
     "imagemin-webpack-plugin": "^2.4.2",
     "jquery": "^3.5.1",
-    "laravel-mix": "^5.0.7",
+    "laravel-mix": "^6.0.49",
     "laravel-mix-string-replace": "^0.1.0",
     "popover.js": "^0.2.40",
     "popper.js": "^1.14.7",
